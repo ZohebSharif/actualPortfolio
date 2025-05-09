@@ -161,6 +161,21 @@ const Demo = () => {
             description: 'The quiz module displays results and provides feedback on correct and incorrect answers to enhance learning.'
           }
         ];
+      case '7': // AI Study Guide Generator
+        return [
+          {
+            image: 'https://i.imgur.com/xFXLQdX.png',
+            description: 'The main interface of the AI Study Guide Generator with two tabs: "Create Guide" and "View Guides". Users can enter any topic to generate a comprehensive study guide.'
+          },
+          {
+            image: 'https://i.imgur.com/D2YpEz9.png',
+            description: 'The "Create Guide" tab showing the input field where users can specify topics for the AI to generate study materials.'
+          },
+          {
+            image: 'https://i.imgur.com/wPFXNJP.png',
+            description: 'The "View Guides" tab displaying saved study guides in an accordion format, allowing users to expand each guide to view its detailed content.'
+          }
+        ];
       default:
         // Default screenshots for any other projects
         return [
@@ -242,6 +257,16 @@ const Demo = () => {
         github: 'https://github.com/ZohebSharif/dvdPlayer',
         demo: '/demo/5',
         featured: false
+      },
+      {
+        id: '7',
+        title: 'AI Study Guide Generator',
+        description: 'Developed a React-based web application that generates comprehensive study guides on any topic using AI.',
+        image: 'https://i.imgur.com/xFXLQdX.png',
+        tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI', 'Full Stack'],
+        github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
+        demo: '/demo/7',
+        featured: true
       }
     ];
   };

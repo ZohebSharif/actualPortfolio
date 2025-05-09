@@ -95,6 +95,21 @@ const Projects = () => {
       ]
     },
     {
+      id: '7',
+      title: 'AI Study Guide Generator',
+      description: 'Developed a React-based web application that generates comprehensive study guides on any topic using AI. The app uses Groq\'s LLM (llama3-8b-8192 model) to create detailed study materials and stores them in a Supabase database for easy access later. Features a clean dark-themed UI with two tabs: one for creating new guides and one for viewing saved guides.',
+      image: 'https://i.imgur.com/v1zhPXf.png',
+      tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI', 'Full Stack'],
+      github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
+      demo: '/demo/7',
+      featured: true,
+      screenshots: [
+        'https://i.imgur.com/mt2gk0U.png',
+        'https://i.imgur.com/LU8XjVv.png',
+        'https://i.imgur.com/G9fpV74.png'
+      ]
+    },
+    {
       id: '4',
       title: 'Wordle Clone',
       description: 'I built a Wordle game from scratch using Java and Swing, featuring an interactive graphical user interface (GUI) for players to guess a secret five-letter word within a limited number of attempts. The game provides real-time feedback on correct, misplaced, and incorrect letters, with limited attempts to solve the puzzle, adding a challenge element.',
