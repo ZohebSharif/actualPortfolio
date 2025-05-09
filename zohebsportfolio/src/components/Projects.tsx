@@ -52,7 +52,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
       tags: ['Fetch AI Agent', 'PyTorch', 'Python', 'Machine Learning', 'CSS', 'HTML'],
       github: 'https://github.com/ZohebSharif/pokemon-showdown-bot',
-      demo: 'https://yourdomain.com/pokemon',
+      demo: '',
       featured: true
     },
     {
