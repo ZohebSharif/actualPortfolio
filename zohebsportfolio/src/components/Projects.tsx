@@ -87,7 +87,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
       tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
       github: '',
-      demo: 'https://i.imgur.com/AIp7Epw.png',
+      demo: '/demo/3',
       featured: false,
       screenshots: [
         'https://i.imgur.com/5EO74Ut.jpg',  // Direct image link, not album link
