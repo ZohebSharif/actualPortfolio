@@ -114,7 +114,7 @@ const About = () => {
                   alt="Zoheb Sharif"
                   className="w-full h-full object-cover object-center brightness-90 hover:brightness-100 transition-all duration-300"
                 />
-                <div className="absolute inset-0 bg-accent/10 hover:bg-transparent transition-colors duration-300"></div>
+                <div className="absolute inset-0 hover:bg-transparent transition-colors duration-300"></div>
               </div>
               <div className="absolute -bottom-2 -right-2 w-24 h-24 border-r-2 border-b-2 border-accent opacity-60"></div>
               <div className="absolute -top-2 -left-2 w-24 h-24 border-l-2 border-t-2 border-accent opacity-60"></div>
