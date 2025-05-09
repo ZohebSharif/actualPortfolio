@@ -1,7 +1,8 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/zohebsportfolio/$1" }
+    { "source": "/(.*)", "destination": "/$1" }
   ],
+  "installCommand": "git clone https://github.com/ZohebSharif/zohebsportfolio.git && cd zohebsportfolio && npm install",
   "buildCommand": "cd zohebsportfolio && npm run build",
   "outputDirectory": "zohebsportfolio/dist",
   "framework": "vite"
