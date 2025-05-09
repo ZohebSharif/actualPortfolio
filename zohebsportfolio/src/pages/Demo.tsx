@@ -74,11 +74,11 @@ const Demo = () => {
       case '1': // AI Pokemon Player
         return [
           {
-            image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
+            image: 'https://i.imgur.com/4YNauTT.png',
             description: 'The Chrome extension interface showing the AI suggesting the next optimal move in a Pokemon battle.'
           },
           {
-            image: 'https://i.imgur.com/RqSdf9Z.png',
+            image: 'https://i.imgur.com/aM8wgJn.png',
             description: 'The backend ML model processing battle data to determine the best counter-strategy against the opponent\'s team.'
           },
           {
