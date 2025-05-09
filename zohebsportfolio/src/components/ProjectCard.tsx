@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     if (project.demo) {
       // If demo starts with http or /, it's an external link
       if (project.demo.startsWith('http') || project.demo.startsWith('/')) {
-        window.open(project.demo, '_blank');
+        window.location.href = project.demo;
       } else {
         // Otherwise, navigate to the demo page
         navigate(`/demo/${project.id}`);
@@ -69,8 +69,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.github && (
             <a
               href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
               className="hover:text-accent transition-colors"
               aria-label={`GitHub repository for ${project.title}`}
             >

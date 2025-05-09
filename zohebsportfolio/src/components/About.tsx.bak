@@ -2,7 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  // Skills with categories
+  //             </motion.variants>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ scale: 1.02 }}
+            className="md:col-span-2"
+          >t with categories
   const skillCategories = [
     {
       name: "Languages",
@@ -45,9 +55,7 @@ const About = () => {
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
         <div className="hidden md:block absolute top-40 left-1/4 w-1 h-40 bg-gradient-to-b from-accent/0 via-accent/30 to-accent/0"></div>
         <div className="hidden md:block absolute bottom-40 right-1/4 w-1 h-40 bg-gradient-to-b from-accent/0 via-accent/30 to-accent/0"></div>
-      </div>
-
-      <div className="max-w-5xl mx-auto relative z-10">
+      </div>      <div className="max-w-5xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,7 +112,6 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
             whileHover={{ scale: 1.02 }}
-            className="md:col-span-2"
           >
             <div className="relative group">
               <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-accent to-secondary opacity-30 blur-lg group-hover:opacity-60 transition duration-500"></div>
