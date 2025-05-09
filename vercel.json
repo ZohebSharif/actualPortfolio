@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/zohebsportfolio/$1" }
+  ],
+  "buildCommand": "cd zohebsportfolio && npm run build",
+  "outputDirectory": "zohebsportfolio/dist",
+  "framework": "vite"
+}
