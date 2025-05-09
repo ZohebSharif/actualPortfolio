@@ -98,7 +98,7 @@ const Projects = () => {
       id: '7',
       title: 'AI Study Guide Generator',
       description: 'Developed a React-based web application that generates comprehensive study guides on any topic using AI. The app uses Groq\'s LLM (llama3-8b-8192 model) to create detailed study materials and stores them in a Supabase database for easy access later. Features a clean dark-themed UI with two tabs: one for creating new guides and one for viewing saved guides.',
-      image: 'https://i.imgur.com/v1zhPXf.png',
+      image: 'https://i.imgur.com/LW9S3pW.png',
       tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI', 'Full Stack'],
       github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
       demo: '/demo/7',
