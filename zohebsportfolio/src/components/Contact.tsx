@@ -1,28 +1,121 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // In a real application, you'd send this data to your backend
-    // For now, we'll just show a success message
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-      className: "bg-accent/10 border-accent/20 text-slate-light",
-    });
+    if (!formRef.current) return;
     
-    // Reset form
-    const form = e.target as HTMLFormElement;
-    form.reset();
+    // Check if the honeypot field is filled (spam bot)
+    const form = formRef.current;
+    const honeypotField = form.querySelector('input[name="website"]') as HTMLInputElement;
+    
+    if (honeypotField && honeypotField.value) {
+      console.log('Spam submission detected');
+      // Pretend to submit the form but don't actually send the email
+      setTimeout(() => {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+          className: "bg-accent/10 border-accent/20 text-slate-light",
+        });
+        form.reset();
+      }, 1000);
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+
+    const serviceId = 'service_0g3hv2l';
+    const templateId = 'template_a5jee4c'; 
+    const publicKey = 'ahKG-bCTk5AKgX4mD';
+    
+    // Log form data to help diagnose issues
+    const formData = {
+      name: (form.elements.namedItem('from_name') as HTMLInputElement)?.value,
+      email: (form.elements.namedItem('reply_to') as HTMLInputElement)?.value,
+      subject: (form.elements.namedItem('subject') as HTMLInputElement)?.value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement)?.value
+    };
+    
+    console.log('Sending form data:', formData);
+
+    // Try direct parameters approach first
+    const templateParams = {
+      from_name: formData.name,
+      reply_to: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    };
+    
+    // Send the email directly with parameters
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+          className: "bg-accent/10 border-accent/20 text-slate-light",
+        });
+        
+        // Reset form
+        form.reset();
+      })
+      .catch((error) => {
+        console.error('Direct send failed, trying form method:', error);
+        
+        // Fall back to form method if direct send fails
+        return emailjs.sendForm(serviceId, templateId, form, publicKey);
+      })
+      .then((response) => {
+        if (response) {
+          console.log('SUCCESS with form method!', response.status, response.text);
+          toast({
+            title: "Message sent!",
+            description: "Thank you for reaching out. I'll get back to you soon.",
+            className: "bg-accent/10 border-accent/20 text-slate-light",
+          });
+          
+          // Reset form
+          form.reset();
+        }
+      })
+      .catch((error) => {
+        console.error('All send methods failed:', error);
+        console.error('Error details:', JSON.stringify(error, null, 2));
+        
+        // Provide more specific error messages based on error type
+        let errorMessage = "There was a problem sending your message. Please try again later.";
+        
+        if (error.status === 400) {
+          errorMessage = "Invalid form data. Please make sure all fields are filled correctly and try again.";
+        } else if (error.status === 403) {
+          errorMessage = "Access denied. Please try again later.";
+        } else if (error.status === 429) {
+          errorMessage = "Too many requests. Please try again later.";
+        }
+        
+        toast({
+          title: "Message failed to send",
+          description: errorMessage,
+          variant: "destructive",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   const socialLinks = [
@@ -140,7 +233,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="glass-card p-6 rounded-xl border border-accent/20">
+            <form ref={formRef} onSubmit={handleSubmit} className="glass-card p-6 rounded-xl border border-accent/20">
               <h3 className="text-xl font-semibold mb-4 text-slate-light">Send me a message</h3>
               
               <div className="space-y-4">
@@ -150,11 +243,16 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="name" 
-                    name="name" 
+                    name="from_name" 
                     required 
                     placeholder="John Doe"
                     className="bg-navy border-muted focus:border-accent/50 focus:ring-accent/30"
                   />
+                </div>
+                
+                <div style={{ display: 'none' }}>
+                  <label htmlFor="website">Website (Leave this empty)</label>
+                  <input id="website" name="website" />
                 </div>
                 
                 <div>
@@ -163,7 +261,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="email" 
-                    name="email" 
+                    name="reply_to" 
                     type="email" 
                     required 
                     placeholder="john@example.com"
@@ -199,9 +297,19 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   className="w-full relative overflow-hidden group bg-navy border border-accent hover:bg-accent/10 text-slate-light"
+                  disabled={isSubmitting}
                 >
                   <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-accent rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
-                  <span className="relative">Send Message</span>
+                  <span className="relative flex items-center justify-center">
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Send Message"
+                    )}
+                  </span>
                 </Button>
               </div>
             </form>

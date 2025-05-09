@@ -52,7 +52,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
       tags: ['Fetch AI Agent', 'PyTorch', 'Python', 'Machine Learning', 'CSS', 'HTML'],
       github: 'https://github.com/ZohebSharif/pokemon-showdown-bot',
-      demo: '',
+      demo: '/demo/1',
       featured: true
     },
     {
@@ -62,7 +62,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
       tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI Design', 'Software Architecture', 'Testing'],
       github: 'https://github.com/ZohebSharif/communicationsGroup4',
-      demo: '',
+      demo: '/demo/2',
       featured: true
     },
     {
@@ -101,7 +101,7 @@ const Projects = () => {
       image: 'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
       tags: ['Java', 'Java Swing', 'UI Design', 'Algorithm Design', 'OOP', 'Problem Solving'],
       github: 'https://github.com/ZohebSharif/wordleUnlimited',
-      demo: '',
+      demo: '/demo/4',
       featured: false
     },
     {
@@ -111,7 +111,7 @@ const Projects = () => {
       image: 'https://i.ebayimg.com/images/g/ZPgAAOSwn6Zj9Apd/s-l1600.webp',
       tags: ['Java', 'Java Swing', 'OOP', 'File I/O', 'GUI Development', 'Data Management'],
       github: 'https://github.com/ZohebSharif/dvdPlayer',
-      demo: '',
+      demo: '/demo/5',
       featured: false
     }
   ];
