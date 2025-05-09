@@ -47,7 +47,7 @@ const Contact = () => {
     
 
     
-    const serviceId = 'service_0g3hv2l';
+    const serviceId = 'service_5bs4gup';
     const templateId = 'template_a5jee4c'; 
     
     // Log form data to help diagnose issues
