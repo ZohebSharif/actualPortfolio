@@ -142,7 +142,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="clip-path-wave bg-navy-light py-24 pt-32 md:pt-40 relative">
+    <section id="projects" className="clip-path-wave bg-navy-light py-24 pt-32 md:pt-40 pb-64 md:pb-80 lg:pb-96 relative">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none sparkle-bg">
         <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
@@ -238,7 +238,7 @@ const Projects = () => {
         </motion.div>
         
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12 mb-12 md:mb-16 lg:mb-24">
           <AnimatePresence mode="wait">
             {displayProjects.map((project, index) => (
               <motion.div 

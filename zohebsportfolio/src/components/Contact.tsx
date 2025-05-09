@@ -140,7 +140,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding py-24 pb-48 md:pb-56 relative">
+    <section id="contact" className="section-padding pt-32 md:pt-40 py-24 pb-48 md:pb-56 relative -mt-20 md:-mt-28 lg:-mt-36">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl"></div>
