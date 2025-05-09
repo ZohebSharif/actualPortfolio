@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,6 +18,7 @@ export interface Project {
   github: string;
   demo: string;
   featured: boolean;
+  screenshots?: string[]; // Optional array of screenshot URLs
 }
 
 const Admin = () => {

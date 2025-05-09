@@ -78,12 +78,12 @@ const Demo = () => {
             description: 'The Chrome extension interface showing the AI suggesting the next optimal move in a Pokemon battle.'
           },
           {
-            image: 'https://i.imgur.com/Z0KCwM0.png',
+            image: 'https://i.imgur.com/RqSdf9Z.png',
             description: 'The backend ML model processing battle data to determine the best counter-strategy against the opponent\'s team.'
           },
           {
-            image: 'https://i.imgur.com/JcfHBXD.png',
-            description: 'Analytics dashboard showing win rates and performance metrics for different AI strategies.'
+            image: 'https://i.imgur.com/gliPxIx.png',
+            description: 'Utilized a Q-table to analyze the effectiveness of different moves and strategies based on the current battle state.'
           }
         ];
       case '2': // Java-Based Communications App
@@ -104,16 +104,16 @@ const Demo = () => {
       case '3': // Statistical Analysis with R
         return [
           {
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-            description: 'Visualization of the statistical analysis results showing correlation between key variables.'
-          },
-          {
-            image: 'https://i.imgur.com/wYdf5xZ.png',
-            description: 'R code and output demonstrating the hypothesis testing methodology used in the research.'
-          },
-          {
-            image: '/REU PRESENTABLE.png',
+            image: 'https://i.imgur.com/AIp7Epw.png',
             description: 'Presentation poster summarizing the research findings and statistical significance.'
+          },
+          {
+            image: 'https://i.imgur.com/qLYDN87.png',
+            description: 'R code demonstrating the hypothesis testing methodology used in the research.'
+          },
+          {
+            image: 'https://i.imgur.com/XjxKHo5.png',
+            description: 'Visualization of the statistical analysis results showing correlation between key variables.'
           }
         ];
       case '4': // Wordle Clone
