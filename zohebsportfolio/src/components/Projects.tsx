@@ -66,6 +66,21 @@ const Projects = () => {
       featured: true
     },
     {
+      id: '6',
+      title: 'HackDavis Project',
+      description: 'Developed an innovative educational platform called EasyLearn during the HackDavis hackathon. This solution addresses the challenge of quick, accessible learning through AI-powered lessons, interactive quizzes, and voice interaction capabilities.',
+      image: 'https://i.imgur.com/BHuLvjO.png',
+      tags: ['Hackathon', 'Team Project', 'React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack'],
+      github: 'https://github.com/yoshiyahoo/HackDavis-Repo',
+      demo: '/demo/6',
+      featured: true,
+      screenshots: [
+        'https://i.imgur.com/qT7Pjoa.png',
+        'https://i.imgur.com/75YUbcg.png',
+        'https://i.imgur.com/rKgJ3YX.png'
+      ]
+    },
+    {
       id: '3',
       title: 'Statistical Analysis with R',
       description: 'Research project focused on conducting statistical analysis and hypothesis testing using R, with a particular focus on linear regression models using datasets from Kaggle. Explored various data models and applied statistical concepts to identify significant trends and patterns.',

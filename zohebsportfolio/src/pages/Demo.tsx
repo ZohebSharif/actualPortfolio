@@ -146,6 +146,21 @@ const Demo = () => {
             description: 'DVDs are persisted in a local text file, allowing users to add, remove, and edit their collection.'
           }
         ];
+      case '6': // HackDavis Project
+        return [
+          {
+            image: 'https://i.imgur.com/qT7Pjoa.png',
+            description: 'The main interface of EasyLearn showing the interactive chat where users can request lessons on any topic.'
+          },
+          {
+            image: 'https://i.imgur.com/75YUbcg.png',
+            description: 'After receiving a lesson, users can take an interactive quiz to test their knowledge of the material.'
+          },
+          {
+            image: 'https://i.imgur.com/rKgJ3YX.png',
+            description: 'The quiz module displays results and provides feedback on correct and incorrect answers to enhance learning.'
+          }
+        ];
       default:
         // Default screenshots for any other projects
         return [
@@ -185,6 +200,16 @@ const Demo = () => {
         image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
         tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI Design'],
         github: 'https://github.com/ZohebSharif/communicationsGroup4',
+        demo: '',
+        featured: true
+      },
+      {
+        id: '6',
+        title: 'HackDavis Project',
+        description: 'Developed an innovative educational platform called EasyLearn during the HackDavis hackathon. This solution addresses the challenge of quick, accessible learning through AI-powered lessons, interactive quizzes, and voice interaction capabilities.',
+        image: 'https://i.imgur.com/BHuLvjO.png',
+        tags: ['Hackathon', 'Team Project', 'React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack'],
+        github: 'https://github.com/yoshiyahoo/HackDavis-Repo',
         demo: '',
         featured: true
       },
