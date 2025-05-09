@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cd zohebsportfolio && npm run dev",
-    "build": "cd zohebsportfolio && npm run build",
+    "build": "cd zohebsportfolio && npm install && npm run build",
     "preview": "cd zohebsportfolio && npm run preview"
   },
   "keywords": [],

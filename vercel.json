@@ -2,5 +2,7 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
+  "buildCommand": "cd zohebsportfolio && npm install && npm run build",
+  "outputDirectory": "zohebsportfolio/dist",
   "framework": "vite"
 }
