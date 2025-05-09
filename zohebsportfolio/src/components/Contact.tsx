@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -11,6 +11,11 @@ const Contact = () => {
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Initialize EmailJS with your public key
+  useEffect(() => {
+    emailjs.init("ahKG-bCTk5AKgX4mD");
+  }, []);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,10 +42,13 @@ const Contact = () => {
     
     setIsSubmitting(true);
     
+    // Display environment information for debugging
+    console.log('Environment:', import.meta.env.MODE);
+    
 
+    
     const serviceId = 'service_0g3hv2l';
     const templateId = 'template_a5jee4c'; 
-    const publicKey = 'ahKG-bCTk5AKgX4mD';
     
     // Log form data to help diagnose issues
     const formData = {
@@ -52,7 +60,7 @@ const Contact = () => {
     
     console.log('Sending form data:', formData);
 
-    // Try direct parameters approach first
+    // Create template parameters from form data
     const templateParams = {
       from_name: formData.name,
       reply_to: formData.email,
@@ -60,8 +68,8 @@ const Contact = () => {
       message: formData.message
     };
     
-    // Send the email directly with parameters
-    emailjs.send(serviceId, templateId, templateParams, publicKey)
+    // Using emailjs.send with updated v4 syntax
+    emailjs.send(serviceId, templateId, templateParams)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         toast({
@@ -74,10 +82,11 @@ const Contact = () => {
         form.reset();
       })
       .catch((error) => {
-        console.error('Direct send failed, trying form method:', error);
+        console.error('Email sending failed:', error);
         
         // Fall back to form method if direct send fails
-        return emailjs.sendForm(serviceId, templateId, form, publicKey);
+        console.log('Trying form method as fallback');
+        return emailjs.sendForm(serviceId, templateId, form);
       })
       .then((response) => {
         if (response) {
