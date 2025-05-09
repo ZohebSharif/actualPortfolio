@@ -35,6 +35,8 @@ const Index = () => {
         <Hero />
         <About />
         <Projects />
+        {/* Add spacer to ensure Projects and Contact sections don't overlap */}
+        <div className="h-16 md:h-24 lg:h-32"></div>
         <Contact />
       </main>
       <Footer />

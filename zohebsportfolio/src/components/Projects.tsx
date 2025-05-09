@@ -142,7 +142,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="clip-path-wave bg-navy-light py-24 relative">
+    <section id="projects" className="clip-path-wave bg-navy-light py-24 pt-32 md:pt-40 relative">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none sparkle-bg">
         <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
