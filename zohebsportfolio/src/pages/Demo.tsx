@@ -89,16 +89,16 @@ const Demo = () => {
       case '2': // Java-Based Communications App
         return [
           {
-            image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
+            image: 'https://i.imgur.com/CqVSu0L.png',
             description: 'The main chat interface of the Java Communications App with multiple active conversations.'
           },
           {
-            image: 'https://i.imgur.com/DKH2Nni.png',
-            description: 'The settings panel for configuring server connections and user preferences.'
+            image: 'https://i.imgur.com/N0753uF.png',
+            description: 'Server-side console showing real-time logs of incoming and outgoing messages.'
           },
           {
-            image: 'https://i.imgur.com/TJGPArE.png',
-            description: 'The file transfer module showing real-time transfer rates and progress indicators.'
+            image: 'https://i.imgur.com/Zry67qz.png',
+            description: 'Multiple client windows demonstrating the app\'s ability to handle multiple users and conversations simultaneously.'
           }
         ];
       case '3': // Statistical Analysis with R
