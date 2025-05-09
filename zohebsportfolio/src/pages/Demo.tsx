@@ -119,31 +119,31 @@ const Demo = () => {
       case '4': // Wordle Clone
         return [
           {
-            image: 'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
+            image: 'https://i.imgur.com/tjPlOUM.png',
             description: 'The main game interface of my Java Wordle clone with an active game in progress.'
           },
           {
-            image: 'https://i.imgur.com/IuO42Ft.png',
-            description: 'The statistics screen showing player performance over multiple games.'
+            image: 'https://i.imgur.com/cdSt45U.png',
+            description: 'A game loss.'
           },
           {
-            image: 'https://i.imgur.com/6Lz94MB.png',
-            description: 'Settings menu allowing customization of game difficulty and word length options.'
+            image: 'https://i.imgur.com/7tEKH8z.png',
+            description: 'Source code for creating the GUI and handling user interactions.'
           }
         ];
       case '5': // DVD Collection Management System
         return [
           {
-            image: 'https://i.ebayimg.com/images/g/ZPgAAOSwn6Zj9Apd/s-l1600.webp',
+            image: 'https://i.imgur.com/XuRaIou.png',
             description: 'The main dashboard of the DVD Collection Management System showing the user\'s library overview.'
           },
           {
-            image: 'https://i.imgur.com/uLBaQRw.png',
-            description: 'Add/Edit DVD form with fields for title, director, genre, and other metadata.'
+            image: 'https://i.imgur.com/ZmGOedG.png',
+            description: 'Clicking "Play" on a DVD opens a new window with the DVD\'s movie, uses the devices native player.'
           },
           {
-            image: 'https://i.imgur.com/hK9FyER.png',
-            description: 'Search and filtering interface that allows users to quickly find specific DVDs in their collection.'
+            image: 'https://i.imgur.com/u6WEbZK.png',
+            description: 'DVDs are persisted in a local text file, allowing users to add, remove, and edit their collection.'
           }
         ];
       default:
