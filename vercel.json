@@ -2,8 +2,6 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/$1" }
   ],
-  "installCommand": "cd zohebsportfolio && npm install",
-  "buildCommand": "cd zohebsportfolio && npm run build",
-  "outputDirectory": "zohebsportfolio/dist",
+ 
   "framework": "vite"
 }
