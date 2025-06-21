@@ -110,7 +110,7 @@ const About = () => {
               <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-accent to-secondary opacity-30 blur-lg group-hover:opacity-60 transition duration-500"></div>
               <div className="relative aspect-[3/4] md:aspect-[2/3] bg-navy-light rounded-lg overflow-hidden border border-accent/20">
                 <img
-                  src="zohebsharif.tiff"
+                  src="zohebsharif.png"
                   alt="Zoheb Sharif"
                   className="w-full h-full object-cover object-center brightness-90 hover:brightness-100 transition-all duration-300"
                 />
