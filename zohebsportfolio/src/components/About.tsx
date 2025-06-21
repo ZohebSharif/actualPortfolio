@@ -110,11 +110,11 @@ const About = () => {
               <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-accent to-secondary opacity-30 blur-lg group-hover:opacity-60 transition duration-500"></div>
               <div className="relative aspect-[3/4] md:aspect-[2/3] bg-navy-light rounded-lg overflow-hidden border border-accent/20">
                 <img
-                  src="zohebsharif.png"
+                  src="zohebsharif.webp"
                   alt="Zoheb Sharif"
                   className="w-full h-full object-cover object-center brightness-90 hover:brightness-100 transition-all duration-300"
                 />
-                <div className="absolute inset-0 hover:bg-transparent transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-accent/10 hover:bg-transparent transition-colors duration-300"></div>
               </div>
               <div className="absolute -bottom-2 -right-2 w-24 h-24 border-r-2 border-b-2 border-accent opacity-60"></div>
               <div className="absolute -top-2 -left-2 w-24 h-24 border-l-2 border-t-2 border-accent opacity-60"></div>
