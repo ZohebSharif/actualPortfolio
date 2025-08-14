@@ -46,6 +46,21 @@ const Projects = () => {
   // Sample projects if no projects are found in localStorage
   const sampleProjects: Project[] = [
     {
+      id: '8',
+      title: 'ALS Publications Management System',
+      description: 'Developed a sophisticated scientific publication management and visualization platform for Lawrence Berkeley National Laboratory\'s Advanced Light Source facility. Features a multi-route React application with admin and slideshow views, scientific data visualization with interactive carousel displays, and category-based content organization across Chemistry/Energy, Physics, Bioscience, and other research domains. Built with enterprise-level architecture for prestigious research institution.',
+      image: 'https://i.imgur.com/IJdE8RA.png',
+      tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Visualization', 'Enterprise Development', 'Research Institutions'],
+      github: 'https://zohebsharif.github.io/EasyPublication/',
+      demo: '/demo/8',
+      featured: true,
+      screenshots: [
+        'https://i.imgur.com/IJdE8RA.png',
+        'https://i.imgur.com/phujwfu.png',
+        'https://i.imgur.com/kf3VO0F.png'
+      ]
+    },
+    {
       id: '1',
       title: 'AI Pokemon Player',
       description: 'A themed Chrome extension with a user-friendly UI to assist players in Pokemon Showdown by suggesting optimal moves. Integrates front-end technologies with AI-driven decision-making using PyTorch and Fetch AI. The AI model learns by parsing chat logs from Pokemon Showdown to suggest optimal moves based on previous gameplay data.',

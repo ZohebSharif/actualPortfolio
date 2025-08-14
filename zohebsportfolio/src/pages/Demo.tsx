@@ -175,6 +175,21 @@ const Demo = () => {
             description: 'The "View Guides" tab showing persistent storage functionality - previously saved study guides are queried from Supabase database and displayed with expandable sections for efficient content review and future reference.'
           }
         ];
+      case '8': // ALS Publications Management System
+        return [
+          {
+            image: 'https://i.imgur.com/IJdE8RA.png',
+            description: 'Main web interface of the ALS Publications Management System showcasing the scientific publication carousel with category-based organization for Chemistry/Energy, Physics, Bioscience, and other research domains at Lawrence Berkeley National Laboratory.'
+          },
+          {
+            image: 'https://i.imgur.com/phujwfu.png',
+            description: 'Interactive slideshow view displaying scientific research publications with smooth transitions and professional presentation optimized for research institution environments and conference presentations.'
+          },
+          {
+            image: 'https://i.imgur.com/kf3VO0F.png',
+            description: 'Administrative interface for content management, allowing authorized users to add, edit, and organize scientific publications across different research categories with enterprise-level data handling and user authentication.'
+          }
+        ];
       default:
         // Default screenshots for any other projects
         return [
@@ -197,6 +212,16 @@ const Demo = () => {
   // Sample projects function (copied from Projects.tsx)
   const getSampleProjects = () => {
     return [
+      {
+        id: '8',
+        title: 'ALS Publications Management System',
+        description: 'Developed a sophisticated scientific publication management and visualization platform for Lawrence Berkeley National Laboratory\'s Advanced Light Source facility. Features a multi route React application with admin and slideshow views, scientific data visualization with interactive carousel displays, and category based content organization across Chemistry/Energy, Physics, Bioscience, and other research domains. Built with enterprise level architecture for prestigious research institution.',
+        image: 'https://i.imgur.com/IJdE8RA.png',
+        tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Visualization', 'Enterprise Development', 'Research Institutions'],
+        github: 'https://zohebsharif.github.io/EasyPublication/',
+        demo: '/demo/8',
+        featured: true
+      },
       {
         id: '1',
         title: 'AI Pokemon Player',
@@ -383,7 +408,7 @@ const Demo = () => {
               className="border-accent text-accent hover:bg-accent/10"
               onClick={() => window.open(project.github, '_blank')}
             >
-              View Source Code
+              {project.id === '8' ? 'View Live Demo' : 'View Source Code'}
             </Button>
           )}
           
