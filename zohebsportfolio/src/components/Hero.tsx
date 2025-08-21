@@ -48,7 +48,7 @@ const Hero = () => {
         >
           I'm a Computer Science major and software engineer specializing in building 
           exceptional digital experiences. Currently, I'm focused on building accessible, 
-          human-centered products.
+          human centered products.
         </motion.p>
         
         <motion.div 

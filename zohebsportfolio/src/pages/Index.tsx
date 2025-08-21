@@ -37,7 +37,6 @@ const Index = () => {
         <About />
         <Projects />
         <Experience />
-        {/* Added empty div with sufficient height to ensure no overlap */}
         <div className="h-24 md:h-32 lg:h-40"></div>
         <Contact />
       </main>
