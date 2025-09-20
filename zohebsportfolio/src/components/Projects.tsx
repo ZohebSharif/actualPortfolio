@@ -48,7 +48,7 @@ const Projects = () => {
     {
       id: '8',
       title: 'ALS Publications Management System',
-      description: 'Developed a sophisticated scientific publication management and visualization platform for Lawrence Berkeley National Laboratory\'s Advanced Light Source facility. Features a multi-route React application with admin and slideshow views, scientific data visualization with interactive carousel displays, and category-based content organization across Chemistry/Energy, Physics, Bioscience, and other research domains. Built with enterprise-level architecture for prestigious research institution.',
+      description: 'Developed an advanced scientific publication management and visualization platform for the Advanced Light Source facility of Lawrence Berkeley National Laboratory. Has a multi-path React application with admin and slideshow view, scientific data visualization with interactive carousel displays, and category-based content presentation under Chemistry/Energy, Physics, Bioscience, and other research fields. With enterprise-level architecture for research institution of excellence.',
       image: 'https://i.imgur.com/IJdE8RA.png',
       tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Visualization', 'Enterprise Development', 'Research Institutions'],
       github: 'https://zohebsharif.github.io/EasyPublication/',
@@ -63,8 +63,7 @@ const Projects = () => {
     {
       id: '1',
       title: 'AI Pokemon Player',
-      description: 'A themed Chrome extension with a user-friendly UI to assist players in Pokemon Showdown by suggesting optimal moves. Integrates front-end technologies with AI-driven decision-making using PyTorch and Fetch AI. The AI model learns by parsing chat logs from Pokemon Showdown to suggest optimal moves based on previous gameplay data.',
-      image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
+      description: 'An easy-to-use themed Chrome add-on to assist Pokemon Showdown players by suggesting the optimal moves. Blends front-end technologies with decision-making artificial intelligence with PyTorch and Fetch AI. The AI is trained to output the best moves by parsing through chat logs of Pokemon Showdown from previous game play.',      image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
       tags: ['Fetch AI Agent', 'PyTorch', 'Python', 'Machine Learning', 'CSS', 'HTML'],
       github: 'https://github.com/ZohebSharif/pokemon-showdown-bot',
       demo: '/demo/1',
@@ -73,7 +72,7 @@ const Projects = () => {
     {
       id: '2',
       title: 'Java-Based Communications App',
-      description: 'Developed a robust, full-featured messaging application with real-time client-server communication. Collaborated with two teammates to design and implement a scalable chat system using Java Sockets. Built a multithreaded server to handle concurrent client connections efficiently and created a responsive GUI with serializable Packet objects for structured message transmission.',
+      description: 'Designed a robust, feature-rich messaging application with client-server real-time communication. Collaborated with two group members to design and implement a scalable chat system using Java Sockets. Developed a multithreaded server to effectively handle concurrent client connections and designed a responsive GUI with serializable Packet objects to send structured messages.',
       image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
       tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI Design', 'Software Architecture', 'Testing'],
       github: 'https://github.com/ZohebSharif/communicationsGroup4',
@@ -83,9 +82,9 @@ const Projects = () => {
     {
       id: '6',
       title: 'HackDavis Project',
-      description: 'Developed an innovative educational platform called EasyLearn during the HackDavis hackathon. This solution addresses the challenge of quick, accessible learning through AI-powered lessons, interactive quizzes, and voice interaction capabilities.',
+      description: 'Developed an educational platform called EasyLearn as part of the HackDavis hackathon. The product addresses the issue of quick, ubiquitous learning through AI-based lessons, interactive quizzes, and voice interaction capabilities.',
       image: 'https://i.imgur.com/BHuLvjO.png',
-      tags: ['Hackathon', 'Team Project', 'React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack'],
+      tags: ['Hackathon', 'Team Project', 'React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack', 'TypeScript'],
       github: 'https://github.com/yoshiyahoo/HackDavis-Repo',
       demo: '/demo/6',
       featured: true,
@@ -98,7 +97,7 @@ const Projects = () => {
     {
       id: '3',
       title: 'Statistical Analysis with R',
-      description: 'Research project focused on conducting statistical analysis and hypothesis testing using R, with a particular focus on linear regression models using datasets from Kaggle. Explored various data models and applied statistical concepts to identify significant trends and patterns.',
+      description: 'Research project for conducting statistical analysis and hypothesis testing with R, with specific focus on linear regression models with data from Kaggle. Researched various models of data and applied statistical concepts to identify key trends and patterns.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
       tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
       github: '',
@@ -112,7 +111,8 @@ const Projects = () => {
     {
       id: '7',
       title: 'AI Study Guide Generator',
-      description: 'Developed a React-based web application that generates comprehensive study guides on any topic using AI. The app uses Groq\'s LLM (llama3-8b-8192 model) to create detailed study materials and stores them in a Supabase database for easy access later. Features a clean dark-themed UI with two tabs: one for creating new guides and one for viewing saved guides.',
+
+      description: "Developed a React web app that generates intensive study guides on any topic with the help of AI. The app utilizes Groq's LLM (llama3-8b-8192 model) to generate intricate study materials and stores them in a Supabase database to retrieve later. Features a minimalist dark-mode UI with two tabs: one to generate new guides and another to view saved guides.",
       image: 'https://i.imgur.com/LW9S3pW.png',
       tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI', 'Full Stack'],
       github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
@@ -127,7 +127,7 @@ const Projects = () => {
     {
       id: '4',
       title: 'Wordle Clone',
-      description: 'I built a Wordle game from scratch using Java and Swing, featuring an interactive graphical user interface (GUI) for players to guess a secret five-letter word within a limited number of attempts. The game provides real-time feedback on correct, misplaced, and incorrect letters, with limited attempts to solve the puzzle, adding a challenge element.',
+      description: 'I created a Wordle game from scratch in Java and Swing with an interactive graphical user interface (GUI) for users to find an unknown five-letter word within a predetermined number of attempts. The game provides instantaneous feedback on correct, misplaced, and incorrect letters, with a limited number of attempts to solve the puzzle, adding a sense of challenge.',
       image: 'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
       tags: ['Java', 'Java Swing', 'UI Design', 'Algorithm Design', 'OOP', 'Problem Solving'],
       github: 'https://github.com/ZohebSharif/wordleUnlimited',
@@ -137,7 +137,7 @@ const Projects = () => {
     {
       id: '5',
       title: 'DVD Collection Management System',
-      description: 'Developed a comprehensive DVD collection management application featuring dual interfaces: a graphical user interface (GUI) and a console-based interface. The system allows users to manage DVD metadata (title, rating, running time), add or modify entries, filter by rating, calculate total running time, and even play movies using the system\'s default media player. Implemented with Java and Swing, the application demonstrates object-oriented programming principles including encapsulation and separation of concerns, with persistent data storage through file I/O.',
+      description: "Implemented a comprehensive DVD collection management program with two interfaces: a graphical user interface (GUI) and a console interface.      The program allows users to store DVD metadata (title, rating, running time), add or update entries, filter the entries based on rating, calculate total running time, and even play movies using the system's default media player.'. Implemented with Java and Swing, the application demonstrates object-oriented programming principles like encapsulation and separation of concerns, with data storage persistently achieved through file I/O.",
       image: 'https://i.ebayimg.com/images/g/ZPgAAOSwn6Zj9Apd/s-l1600.webp',
       tags: ['Java', 'Java Swing', 'OOP', 'File I/O', 'GUI Development', 'Data Management'],
       github: 'https://github.com/ZohebSharif/dvdPlayer',

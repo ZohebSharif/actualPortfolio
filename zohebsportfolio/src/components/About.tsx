@@ -6,19 +6,19 @@ const About = () => {
   const skillCategories = [
     {
       name: "Languages",
-      skills: ["C/C++", "Python", "HTML", "MIPS", "JavaScript", "CSS", "UNIX", "Java"]
+      skills: ["C/C++", "Python", "MIPS", "JavaScript", "UNIX", "Java", "Zig", "TypeScript", "R"]
     },
     {
       name: "Frameworks",
-      skills: ["React", "Flask", "PyTorch"]
+      skills: ["React", "Flask", "PyTorch", "Express.js", "Tailwind"]
     },
     {
       name: "Tools",
-      skills: ["Github", "Git", "Figma"]
+      skills: ["Github", "Git", "Figma", "AWS", "Google Cloud", "Vite", "Firebase", "Supabase"]
     },
     {
       name: "Other",
-      skills: ["Agile", "Object Oriented Programming", "Web Design", "APIs", "Frontend Development", "AI", "Machine Learning"]
+      skills: ["Agile", "Object Oriented Programming", "Web Design", "APIs", "Frontend Development", "AI", "Machine Learning", "Testing"]
     }
   ];
 
@@ -67,17 +67,21 @@ const About = () => {
             className="md:col-span-3 space-y-4"
           >
             <p className="text-slate-light leading-relaxed">
-              Hello! I'm Zoheb, a Computer Science major at CSU East Bay with a passion for creating innovative solutions and elegant digital experiences. I recently completed my Associate's degree in Computer Science from Chabot College, and I'm continuing my education to earn my Bachelor's by May 2026.
+               Hi! My name is Zoheb, and I am a Computer Science major at CSU East Bay with a passion for creating innovative products and stunning digital experiences. I recently completed my Associate's in Computer Science from Chabot College, and I am continuing my studies to further complete my Bachelor's by May 2026.        
+            </p>
+
+            <p className="text-slate leading-relaxed">
+              I have been able to gain experience as a Student Assistant for MESA (CSU East Bay), have conducted research at Chabot College, and even worked as an Augmented Reality Extern at Snap Inc. I have enhanced my problem-solving skills and technical acumen with various programming languages and frameworks.
+
             </p>
             
             <p className="text-slate leading-relaxed">
-              I've had the opportunity to work as a Student Assistant at MESA (CSU East Bay), conduct research at Chabot College, and even gained experience as an Augmented Reality Extern at Snap Inc. Through these experiences, I've strengthened my problem-solving abilities and technical expertise across various programming languages and frameworks.
+              Outside of writing code, I am an engaged participant in the STEM community as a Leader Teaching Assistant at The Stem Lab, where I teach CS courses and mentor other learning assistants. I am always looking for ways to continue learning as a developer and to contribute to leading-edge projects.
             </p>
             
-            <p className="text-slate leading-relaxed">
-              When I'm not coding, I'm actively involved in the STEM community as a Leader Teaching Assistant at The Stem Lab, where I provide tutoring in various CS courses and mentor other learning assistants. I'm constantly seeking opportunities to grow as a developer and contribute to innovative projects.
-            </p>
-            
+           
+
+
             <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <h3 className="text-xl font-semibold text-slate-light mt-8 mb-4">Technical Expertise</h3>
               
