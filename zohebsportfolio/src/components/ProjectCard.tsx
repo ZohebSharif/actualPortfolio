@@ -27,13 +27,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <Card className="overflow-hidden rounded-lg bg-navy border-muted transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg h-full flex flex-col">
       <div 
-        className="relative overflow-hidden aspect-video cursor-pointer"
+        className={`relative overflow-hidden ${project.id === '9' ? 'aspect-[4/3]' : 'aspect-video'} cursor-pointer`}
         onClick={() => navigate(`/demo/${project.id}`)}
       >
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className={`w-full h-full transition-transform duration-500 hover:scale-105 ${project.id === '9' ? 'object-contain bg-navy-dark p-2' : 'object-cover'}`}
         />
         {project.featured && (
           <div className="absolute top-2 right-2 bg-accent/80 text-navy-dark text-xs font-medium px-2 py-1 rounded">

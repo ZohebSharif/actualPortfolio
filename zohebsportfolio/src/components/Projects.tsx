@@ -48,8 +48,8 @@ const Projects = () => {
     {
       id: '8',
       title: 'ALS Publications Management System',
-      description: 'Developed an advanced scientific publication management and visualization platform for the Advanced Light Source facility of Lawrence Berkeley National Laboratory. Has a multi-path React application with admin and slideshow view, scientific data visualization with interactive carousel displays, and category-based content presentation under Chemistry/Energy, Physics, Bioscience, and other research fields. With enterprise-level architecture for research institution of excellence.',
-      image: 'https://i.imgur.com/IJdE8RA.png',
+      description: 'Built a publication management platform for Lawrence Berkeley Lab with admin and slideshow views, interactive visualizations, and organized research content across multiple scientific fields.'
+      ,image: 'https://i.imgur.com/IJdE8RA.png',
       tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Visualization', 'Enterprise Development', 'Research Institutions'],
       github: 'https://zohebsharif.github.io/EasyPublication/',
       demo: '/demo/8',
@@ -72,13 +72,28 @@ const Projects = () => {
     {
       id: '2',
       title: 'Java-Based Communications App',
-      description: 'Designed a robust, feature-rich messaging application with client-server real-time communication. Collaborated with two group members to design and implement a scalable chat system using Java Sockets. Developed a multithreaded server to effectively handle concurrent client connections and designed a responsive GUI with serializable Packet objects to send structured messages.',
+      description: 'Designed a robust messaging application with client-server real-time communication. Collaborated with two group members to design and implement a scalable chat system using Java Sockets. Developed a multithreaded server to effectively handle concurrent client connections and designed a responsive GUI with serializable Packet objects to send structured messages.',
       image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
       tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI Design', 'Software Architecture', 'Testing'],
       github: 'https://github.com/ZohebSharif/communicationsGroup4',
       demo: '/demo/2',
       featured: true
     },
+        {
+      id: '9',
+      title: 'Word Hunt Cheater',
+      description: "Built a tool to help you win at Word Hunt games. Just enter the 4x4 letter grid, and it finds all possible words, ranks them by points, and shows you the total score. Quick input with auto-cursor movement makes it super easy to use.",
+      image: 'https://i.imgur.com/UOurQ7z.png',
+      tags: ['React', 'TypeScript', 'Algorithms', 'Tailwind CSS', 'DFS', 'Binary Search', 'Vite'],
+      github: 'https://github.com/ZohebSharif/wordhuntcheater',
+      demo: '/demo/9',
+      featured: true,
+      screenshots: [
+        'https://i.imgur.com/UOurQ7z.png',
+        'https://i.imgur.com/Ddrwh2Q.png'
+      ]
+    },
+
     {
       id: '6',
       title: 'HackDavis Project',
@@ -87,7 +102,7 @@ const Projects = () => {
       tags: ['Hackathon', 'Team Project', 'React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack', 'TypeScript'],
       github: 'https://github.com/yoshiyahoo/HackDavis-Repo',
       demo: '/demo/6',
-      featured: true,
+      featured: false,
       screenshots: [
         'https://i.imgur.com/qT7Pjoa.png',
         'https://i.imgur.com/75YUbcg.png',
@@ -102,7 +117,7 @@ const Projects = () => {
       tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
       github: '',
       demo: '/demo/3',
-      featured: false,
+      featured: true,
       screenshots: [
         'https://i.imgur.com/5EO74Ut.jpg',  // Direct image link, not album link
         'https://i.imgur.com/AIp7Epw.png',
@@ -117,7 +132,7 @@ const Projects = () => {
       tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI', 'Full Stack'],
       github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
       demo: '/demo/7',
-      featured: true,
+      featured: false,
       screenshots: [
         'https://i.imgur.com/mt2gk0U.png',
         'https://i.imgur.com/LU8XjVv.png',
@@ -127,7 +142,7 @@ const Projects = () => {
     {
       id: '4',
       title: 'Wordle Clone',
-      description: 'I created a Wordle game from scratch in Java and Swing with an interactive graphical user interface (GUI) for users to find an unknown five-letter word within a predetermined number of attempts. The game provides instantaneous feedback on correct, misplaced, and incorrect letters, with a limited number of attempts to solve the puzzle, adding a sense of challenge.',
+      description: 'I created a Wordle game in Java and Swing with an interactive graphical user interface (GUI) for users to find an unknown five-letter word within a predetermined number of attempts. The game provides instantaneous feedback on correct, misplaced, and incorrect letters, with a limited number of attempts to solve the puzzle, adding a sense of challenge.',
       image: 'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
       tags: ['Java', 'Java Swing', 'UI Design', 'Algorithm Design', 'OOP', 'Problem Solving'],
       github: 'https://github.com/ZohebSharif/wordleUnlimited',

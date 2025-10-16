@@ -8,6 +8,7 @@ import { Project } from './Admin';
 interface Screenshot {
   image: string;
   description: string;
+  fullWidth?: boolean;
 }
 
 const Demo = () => {
@@ -190,6 +191,19 @@ const Demo = () => {
             description: 'Administrative interface for content management, allowing authorized users to add, edit, and organize scientific publications across different research categories with enterprise-level data handling and user authentication.'
           }
         ];
+      case '9': // Word Hunt Cheater
+        return [
+          {
+            image: 'https://i.imgur.com/UOurQ7z.png',
+            description: 'Easy input grid where you type the letters from your Word Hunt game. The cursor moves automatically to the next cell so you can quickly enter the whole board.',
+            fullWidth: true
+          },
+          {
+            image: 'https://i.imgur.com/Ddrwh2Q.png',
+            description: 'All possible words shown with their point values. The app finds every word in the grid and sorts them by points, showing your total potential score and word count.',
+            fullWidth: true
+          }
+        ];
       default:
         // Default screenshots for any other projects
         return [
@@ -291,6 +305,16 @@ const Demo = () => {
         github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
         demo: '/demo/7',
         featured: true
+      },
+      {
+        id: '9',
+        title: 'Word Hunt Cheater',
+        description: "Built a tool to help you win at Word Hunt games. Just enter the 4x4 letter grid, and it finds all possible words, ranks them by points, and shows you the total score. Quick input with auto-cursor movement makes it super easy to use.",
+        image: 'https://i.imgur.com/UOurQ7z.png',
+        tags: ['React', 'TypeScript', 'Algorithms', 'Tailwind CSS', 'DFS', 'Binary Search', 'Vite'],
+        github: 'https://github.com/ZohebSharif/wordhuntcheater',
+        demo: '/demo/9',
+        featured: true
       }
     ];
   };
@@ -371,25 +395,25 @@ const Demo = () => {
           Project Screenshots & Details
         </motion.h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 ${project.id === '9' ? 'max-w-4xl mx-auto' : ''}`}>
           {screenshots.map((screenshot, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 + index * 0.1 }}
-              className="bg-navy border border-muted rounded-lg overflow-hidden"
+              className={`bg-navy border border-muted rounded-lg overflow-hidden ${screenshot.fullWidth && screenshots.length === 1 ? 'md:col-span-2' : ''}`}
             >
-              <div className="aspect-video overflow-hidden">
+              <div className={`${screenshot.fullWidth ? 'p-2' : 'aspect-video'} overflow-hidden flex items-center justify-center bg-navy-dark`}>
                 <img 
                   src={screenshot.image} 
                   alt={`Screenshot ${index + 1} of ${project.title}`} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  className={`${screenshot.fullWidth ? 'max-w-full max-h-[30vh] object-contain' : 'w-full h-full object-cover'} transition-transform duration-500 hover:scale-105`}
                 />
               </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-slate-light mb-3">Screenshot {index + 1}</h3>
-                <p className="text-slate text-sm">{screenshot.description}</p>
+              <div className="p-3">
+                <h3 className="text-base font-semibold text-slate-light mb-2">Screenshot {index + 1}</h3>
+                <p className="text-slate text-xs">{screenshot.description}</p>
               </div>
             </motion.div>
           ))}
