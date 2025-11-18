@@ -195,10 +195,10 @@ const Contact = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3 + (index * 0.1) }}
+                  transition={{ delay: 0.3 + (index * 0.1), duration: 0.2 }}
                 >
                   <div 
-                    className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                    className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-150"
                     style={{ backgroundColor: link.color }}
                   ></div>
                   <div className="w-12 h-12 rounded-full bg-navy flex items-center justify-center mr-4 border border-accent/30">
@@ -206,21 +206,25 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-slate-light font-semibold">{link.name}</h4>
-                    <p className="text-sm text-slate-dark">{link.url.replace('mailto:', '')}</p>
+                    <p className="text-sm text-accent hover:underline">{link.url.replace('mailto:', '')}</p>
                   </div>
-                  <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                     <span className="text-accent text-sm">Connect →</span>
                   </div>
                 </motion.a>
               ))}
               
               <motion.div 
-                className="p-4 glass-card rounded-lg"
+                className="p-4 glass-card rounded-lg overflow-hidden group relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
+                transition={{ delay: 0.6, duration: 0.2 }}
+                whileHover={{ x: 5 }}
               >
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-150 bg-accent"
+                ></div>
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-navy flex items-center justify-center mr-4 border border-accent/30">
                     <svg className="w-5 h-5 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -230,6 +234,9 @@ const Contact = () => {
                   <div>
                     <h4 className="text-slate-light font-semibold">Resume</h4>
                     <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-sm">Download CV</a>
+                  </div>
+                  <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+                    <span className="text-accent text-sm">View →</span>
                   </div>
                 </div>
               </motion.div>

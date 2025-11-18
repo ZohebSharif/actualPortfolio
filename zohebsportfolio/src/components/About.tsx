@@ -66,18 +66,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-3 space-y-4"
           >
-            <p className="text-slate-light leading-relaxed">
-               Hi! My name is Zoheb, and I am a Computer Science major at CSU East Bay with a passion for creating innovative products and stunning digital experiences. I recently completed my Associate's in Computer Science from Chabot College, and I am continuing my studies to further complete my Bachelor's by May 2026.        
-            </p>
-
-            <p className="text-slate leading-relaxed">
-              I have been able to gain experience as a Student Assistant for MESA (CSU East Bay), have conducted research at Chabot College, and even worked as an Augmented Reality Extern at Snap Inc. I have enhanced my problem-solving skills and technical acumen with various programming languages and frameworks.
-
-            </p>
-            
-            <p className="text-slate leading-relaxed">
-              Outside of writing code, I am an engaged participant in the STEM community as a Leader Teaching Assistant at The Stem Lab, where I teach CS courses and mentor other learning assistants. I am always looking for ways to continue learning as a developer and to contribute to leading-edge projects.
-            </p>
+        
             
            
 
