@@ -165,7 +165,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="section-heading"
         >
-          <span className="text-accent font-mono mr-2">04.</span> Get In Touch
+          <span className="text-accent font-mono mr-2">05.</span> Get In Touch
         </motion.h2>
         
         <div className="grid md:grid-cols-2 gap-12">

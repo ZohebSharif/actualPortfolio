@@ -15,7 +15,7 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Track which section is currently in view
-      const sections = ['about', 'projects', 'experience', 'contact'];
+      const sections = ['about', 'projects', 'experience', 'awards', 'contact'];
       
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
@@ -40,6 +40,7 @@ const Header = () => {
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Awards', href: '#awards' },
     { name: 'Contact', href: '#contact' },
   ];
 

@@ -26,7 +26,7 @@ const Awards = () => {
       description: 'Won 1st place in Freepik Track. Created an automatic ad generator for best selling items for entrepreneurs to make more sales.',
       devpostLink: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
       githubLink: 'https://github.com/nicholasmanha/ag-frontend',
-      tags: ['Freepik API', 'Self Evolving Agents', 'React', 'Flask', 'LinkUp', 'Freepik', 'Loveable']
+      tags: ['Freepik API', 'Self Evolving Agents', 'React', 'Flask', 'LinkUp', 'Loveable']
     },
     {
       id: '2',
@@ -45,7 +45,7 @@ const Awards = () => {
       event: 'Chabot Hacks',
       placement: 'Best Overall',
       date: 'May 2024',
-      description: 'Won 1st place in Best Overall.',
+      description: 'Won 1st place in Best Overall. Created a climate change awareness site where users become aware of their carbon footprint with our carbon footprint calculator.',
       devpostLink: '#', // No Devpost link
       githubLink: 'https://github.com/isaiahw13/Climate-Change-Site.git',
       tags: ['Web Development', 'Climate Tech', 'Environmental Impact', 'MongoDB']
