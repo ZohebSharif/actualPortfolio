@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,44 +6,26 @@
 
 @layer base {
   :root {
-    --background: 219 66% 12%;
-    --foreground: 225 25% 90%;
-
-    --card: 219 66% 15%;
-    --card-foreground: 225 25% 90%;
-
-    --popover: 219 66% 12%;
-    --popover-foreground: 225 25% 90%;
-
-    --primary: 171 100% 69%;
-    --primary-foreground: 219 66% 12%;
-
-    --secondary: 218 32% 60%;
-    --secondary-foreground: 225 25% 90%;
-
-    --muted: 219 32% 20%;
-    --muted-foreground: 219 20% 65%;
-
-    --accent: 171 100% 69%;
-    --accent-foreground: 219 66% 12%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 219 32% 20%;
-    --input: 219 32% 20%;
-    --ring: 171 100% 69%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 96%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 211 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 211 100% 50%;
+    --radius: 0.75rem;
   }
 }
 
@@ -56,118 +36,224 @@
   }
 
   body {
-    @apply bg-navy text-slate-light;
-    background-image: 
-      radial-gradient(circle at 25px 25px, rgba(100, 255, 218, 0.15) 2%, transparent 0%),
-      radial-gradient(circle at 75px 75px, rgba(100, 255, 218, 0.1) 2%, transparent 0%);
-    background-size: 100px 100px;
-  }
-
-  .section-padding {
-    @apply py-20 px-6 md:px-12 lg:px-24;
-  }
-
-  .nav-link {
-    @apply text-slate hover:text-accent transition-colors duration-300 relative;
-  }
-
-  .nav-link::after {
-    content: "";
-    @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-accent transition-all duration-300 ease-in-out;
-  }
-
-  .nav-link:hover::after {
-    @apply w-full;
-  }
-
-  .nav-link.active {
-    @apply text-accent;
-  }
-
-  .nav-link.active::after {
-    @apply w-full;
-  }
-
-  .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary;
-  }
-
-  .section-heading {
-    @apply text-2xl md:text-3xl font-semibold mb-6 text-slate-light flex items-center gap-2;
-  }
-  
-  .section-heading::after {
-    content: "";
-    @apply block h-px bg-muted flex-grow ml-4;
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
-  }
-  
-  .tag {
-    @apply px-3 py-1 text-xs rounded-full bg-navy-light text-slate-light;
-  }
-
-  /* New styling */
-  .glow {
-    box-shadow: 0 0 15px 5px rgba(100, 255, 218, 0.2);
-  }
-
-  .text-glow {
-    text-shadow: 0 0 8px rgba(100, 255, 218, 0.6);
-  }
-
-  .glass-card {
-    @apply bg-navy-light/80 backdrop-blur-sm border border-accent/20 shadow-lg;
-  }
-
-  .animated-background {
-    background: linear-gradient(
-      -45deg, 
-      rgba(10, 25, 47, 0.8) 25%, 
-      rgba(23, 42, 69, 0.8) 50%, 
-      rgba(10, 25, 47, 0.8) 75%
-    );
+    @apply text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #e94560 100%);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: wallpaper-shift 20s ease infinite;
   }
 
-  @keyframes gradient {
+  @keyframes wallpaper-shift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
 
-  .floating {
-    animation: floating 3s ease-in-out infinite;
+  #root {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .macos-menubar {
+    @apply fixed top-0 left-0 right-0 h-7 flex items-center px-4 z-50;
+    background: rgba(30, 30, 30, 0.65);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
   }
 
-  @keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+  .macos-menubar-item {
+    @apply px-2.5 py-0.5 rounded cursor-default;
+    transition: background 0.15s;
   }
 
-  .scale-hover {
-    @apply transition-transform duration-300 hover:scale-105;
+  .macos-menubar-item:hover {
+    background: rgba(255, 255, 255, 0.15);
   }
 
-  .border-glow {
-    @apply border border-accent;
-    box-shadow: 0 0 10px rgba(100, 255, 218, 0.5),
-                inset 0 0 10px rgba(100, 255, 218, 0.2);
+  .macos-window {
+    background: rgba(30, 30, 30, 0.78);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow:
+      0 25px 50px rgba(0, 0, 0, 0.4),
+      0 0 0 0.5px rgba(255, 255, 255, 0.1) inset;
+    overflow: hidden;
   }
 
-  .sparkle-bg {
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2364ffda' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  .macos-titlebar {
+    @apply flex items-center h-12 px-4 relative;
+    background: rgba(40, 40, 40, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .clip-path-slant {
-    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  .traffic-lights {
+    @apply flex items-center gap-2;
   }
 
-  .clip-path-wave {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+  .traffic-light {
+    @apply w-3 h-3 rounded-full;
+    transition: filter 0.15s;
+  }
+
+  .traffic-light:hover {
+    filter: brightness(1.2);
+  }
+
+  .traffic-light-red { background: #ff5f57; }
+  .traffic-light-yellow { background: #febc2e; }
+  .traffic-light-green { background: #28c840; }
+
+  .macos-dock {
+    @apply fixed bottom-2 left-1/2 -translate-x-1/2 flex items-end gap-1 px-2 py-1.5 z-50;
+    background: rgba(30, 30, 30, 0.45);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+  }
+
+  .dock-item {
+    @apply flex flex-col items-center relative cursor-pointer;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .dock-item:hover {
+    transform: translateY(-8px) scale(1.15);
+  }
+
+  .dock-item-icon {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center text-xl;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .dock-tooltip {
+    @apply absolute -top-8 px-3 py-1 rounded-md text-xs font-medium opacity-0 pointer-events-none whitespace-nowrap;
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.9);
+    transition: opacity 0.15s;
+  }
+
+  .dock-item:hover .dock-tooltip {
+    opacity: 1;
+  }
+
+  .dock-separator {
+    @apply w-px h-10 mx-1;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .dock-indicator {
+    @apply w-1 h-1 rounded-full mt-0.5;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .finder-sidebar {
+    @apply py-3;
+    width: 180px;
+    min-width: 180px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(30, 30, 30, 0.3);
+  }
+
+  .finder-sidebar-section {
+    @apply px-4 py-1.5 text-[10px] font-semibold uppercase tracking-wider;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .finder-sidebar-item {
+    @apply flex items-center gap-2.5 px-4 py-1.5 mx-1.5 rounded-md text-[13px] cursor-pointer;
+    color: rgba(255, 255, 255, 0.8);
+    transition: background 0.15s;
+  }
+
+  .finder-sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .finder-sidebar-item.active {
+    background: rgba(0, 122, 255, 0.35);
+    color: white;
+  }
+
+  .finder-content {
+    @apply flex-1 overflow-y-auto p-5;
+  }
+
+  .finder-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .finder-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .finder-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+  }
+
+  .finder-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .finder-project-card {
+    background: rgba(50, 50, 50, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .finder-project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 122, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .macos-tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background: rgba(0, 122, 255, 0.15);
+    color: #5ac8fa;
+    border: 1px solid rgba(0, 122, 255, 0.2);
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-8;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-3 top-2 bottom-0 w-px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .timeline-item:last-child::before {
+    display: none;
+  }
+
+  .timeline-dot {
+    @apply absolute left-1.5 top-1.5 w-3 h-3 rounded-full;
+    background: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.4);
+  }
+
+  @keyframes dock-bounce {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-16px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-8px); }
+  }
+
+  .dock-bounce {
+    animation: dock-bounce 0.6s ease;
   }
 }

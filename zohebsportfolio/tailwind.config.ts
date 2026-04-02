@@ -53,20 +53,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				navy: {
-					light: '#172a45',
-					DEFAULT: '#0a192f',
-					dark: '#020c1b',
-				},
-				slate: {
-					light: '#a8b2d1',
-					DEFAULT: '#8892b0',
-					dark: '#495670',
-				},
-				accent: {
-					DEFAULT: '#64ffda',
-					dark: '#349780',
-				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -76,6 +62,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				macos: {
+					blue: '#007aff',
+					purple: '#5856d6',
+					pink: '#ff2d55',
+					red: '#ff3b30',
+					orange: '#ff9500',
+					yellow: '#ffcc00',
+					green: '#34c759',
+					teal: '#5ac8fa',
+					gray: {
+						100: '#f5f5f7',
+						200: '#e8e8ed',
+						300: '#d2d2d7',
+						400: '#86868b',
+						500: '#6e6e73',
+						600: '#48484a',
+						700: '#363638',
+						800: '#2c2c2e',
+						900: '#1c1c1e',
+					}
 				}
 			},
 			borderRadius: {
@@ -96,25 +103,19 @@ export default {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
-				'fade-in-right': {
-					'0%': { opacity: '0', transform: 'translateX(-20px)' },
-					'100%': { opacity: '1', transform: 'translateX(0)' }
+				'window-open': {
+					'0%': { opacity: '0', transform: 'scale(0.8)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
 				},
-				'fade-in-left': {
-					'0%': { opacity: '0', transform: 'translateX(20px)' },
-					'100%': { opacity: '1', transform: 'translateX(0)' }
-				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out forwards',
-				'fade-in-right': 'fade-in-right 0.5s ease-out forwards',
-				'fade-in-left': 'fade-in-left 0.5s ease-out forwards'
+				'fade-in': 'fade-in 0.4s ease-out forwards',
+				'window-open': 'window-open 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'monospace']
+				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'system-ui', 'sans-serif'],
 			}
 		}
 	},

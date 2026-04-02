@@ -1,48 +1,67 @@
-
-import React, { useEffect } from 'react';
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Projects from '@/components/Projects';
-import Experience from '@/components/Experience';
-import Awards from '@/components/Awards';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import React, { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import MenuBar from '@/components/MenuBar';
+import Dock from '@/components/Dock';
+import FinderWindow from '@/components/FinderWindow';
 
 const Index = () => {
-  // Add a smooth scroll behavior to handle anchor links
-  useEffect(() => {
-    const handleAnchorClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName.toLowerCase() === 'a') {
-        const href = target.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          e.preventDefault();
-          const element = document.querySelector(href);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      }
-    };
-
-    document.addEventListener('click', handleAnchorClick);
-    return () => document.removeEventListener('click', handleAnchorClick);
-  }, []);
+  const [finderOpen, setFinderOpen] = useState(true);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Awards />
-        <div className="h-24 md:h-32 lg:h-40"></div>
-        <Contact />
-      </main>
-      <Footer />
+    <div className="h-screen w-screen relative overflow-hidden select-none">
+      {/* Menu Bar */}
+      <MenuBar />
+
+      {/* Desktop Area */}
+      <div className="absolute inset-0 pt-7 pb-16">
+        {/* Desktop welcome text when no window is open */}
+        <AnimatePresence>
+          {!finderOpen && (
+            <div className="flex flex-col items-center justify-center h-full">
+              <h1
+                className="text-5xl font-bold mb-3"
+                style={{
+                  color: 'rgba(255,255,255,0.9)',
+                  textShadow: '0 2px 10px rgba(0,0,0,0.3)',
+                }}
+              >
+                Zoheb Sharif
+              </h1>
+              <p
+                className="text-lg mb-6"
+                style={{
+                  color: 'rgba(255,255,255,0.6)',
+                  textShadow: '0 1px 5px rgba(0,0,0,0.3)',
+                }}
+              >
+                Software Engineer · CS Student
+              </p>
+              <button
+                onClick={() => setFinderOpen(true)}
+                className="px-5 py-2.5 rounded-xl text-sm font-medium transition-all hover:scale-105"
+                style={{
+                  background: 'rgba(255,255,255,0.12)',
+                  backdropFilter: 'blur(20px)',
+                  color: 'rgba(255,255,255,0.9)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                }}
+              >
+                Open Portfolio →
+              </button>
+            </div>
+          )}
+        </AnimatePresence>
+
+        {/* Finder Window */}
+        <AnimatePresence>
+          {finderOpen && (
+            <FinderWindow onClose={() => setFinderOpen(false)} />
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Dock */}
+      <Dock onOpenFinder={() => setFinderOpen(true)} finderOpen={finderOpen} />
     </div>
   );
 };
