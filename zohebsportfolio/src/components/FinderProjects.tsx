@@ -141,9 +141,9 @@ const FinderProjects = () => {
           Back to Projects
         </button>
 
-        <div className="flex gap-6">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
           <div
-            className="w-80 h-48 rounded-xl overflow-hidden flex-shrink-0"
+            className="w-full sm:w-80 h-40 sm:h-48 rounded-xl overflow-hidden flex-shrink-0"
             style={{ border: '1px solid rgba(255,255,255,0.08)' }}
           >
             <img
@@ -232,7 +232,7 @@ const FinderProjects = () => {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <AnimatePresence>
           {displayed.map((project, idx) => (
             <motion.div

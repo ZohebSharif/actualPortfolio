@@ -13,13 +13,13 @@ const Index = () => {
       <MenuBar />
 
       {/* Desktop Area */}
-      <div className="absolute inset-0 pt-7 pb-16">
+      <div className="absolute inset-0 pt-7 pb-14 sm:pb-16">
         {/* Desktop welcome text when no window is open */}
         <AnimatePresence>
           {!finderOpen && (
             <div className="flex flex-col items-center justify-center h-full">
               <h1
-                className="text-5xl font-bold mb-3"
+                className="text-3xl sm:text-5xl font-bold mb-3"
                 style={{
                   color: 'rgba(255,255,255,0.9)',
                   textShadow: '0 2px 10px rgba(0,0,0,0.3)',
@@ -28,7 +28,7 @@ const Index = () => {
                 Zoheb Sharif
               </h1>
               <p
-                className="text-lg mb-6"
+                className="text-base sm:text-lg mb-6"
                 style={{
                   color: 'rgba(255,255,255,0.6)',
                   textShadow: '0 1px 5px rgba(0,0,0,0.3)',

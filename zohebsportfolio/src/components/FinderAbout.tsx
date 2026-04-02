@@ -28,7 +28,7 @@ const FinderAbout = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35 }}
-        className="flex gap-6 mb-8"
+        className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8"
       >
         {/* Image preview — looks like a file thumbnail in Finder */}
         <div className="flex-shrink-0 flex flex-col items-center">
@@ -131,7 +131,7 @@ const FinderAbout = () => {
         >
           Technical Expertise
         </h3>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.name}
