@@ -60,8 +60,10 @@ const Index = () => {
         </AnimatePresence>
       </div>
 
-      {/* Dock */}
-      <Dock onOpenFinder={() => setFinderOpen(true)} finderOpen={finderOpen} />
+      {/* Dock — hidden when Finder window is open */}
+      {!finderOpen && (
+        <Dock onOpenFinder={() => setFinderOpen(true)} finderOpen={finderOpen} />
+      )}
     </div>
   );
 };

@@ -9,6 +9,7 @@ interface Screenshot {
   image: string;
   description: string;
   fullWidth?: boolean;
+  vertical?: boolean;
 }
 
 const Demo = () => {
@@ -17,6 +18,25 @@ const Demo = () => {
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
+
+  // Allow scrolling on demo pages (body/root have overflow:hidden for the main macOS layout)
+  useEffect(() => {
+    document.body.style.overflow = 'auto';
+    document.body.style.height = 'auto';
+    const root = document.getElementById('root');
+    if (root) {
+      root.style.overflow = 'auto';
+      root.style.height = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+      if (root) {
+        root.style.overflow = '';
+        root.style.height = '';
+      }
+    };
+  }, []);
 
   useEffect(() => {
     // In a real app, you would fetch the project data from an API
@@ -204,6 +224,39 @@ const Demo = () => {
             fullWidth: true
           }
         ];
+      case '10': // EasyAds
+        return [
+          {
+            image: 'https://imgur.com/x9qD197.png',
+            description: 'System architecture and design documentation showing the AI-powered ad generation pipeline and real-time market analytics integration.'
+          },
+          {
+            image: 'https://imgur.com/GO73M4R.png',
+            description: 'AI-generated advertisement for Bluetooth earbuds, demonstrating the platform\'s ability to create dynamic product-specific ads in real-time.'
+          },
+          {
+            image: 'https://imgur.com/sNlaLTl.png',
+            description: 'Real-time market information dashboard displaying pricing data, demand levels, and ad performance metrics updated every three minutes.'
+          }
+        ];
+      case '11': // Android FlashCard App
+        return [
+          {
+            image: 'https://i.imgur.com/kMkbNw5.png',
+            description: 'Statistics screen displaying comprehensive study progress, including accuracy rates, cards mastered, and learning streaks to track improvement over time.',
+            vertical: true
+          },
+          {
+            image: 'https://i.imgur.com/vssR6lr.png',
+            description: 'Main screen of the Android FlashCard App showing the card management interface with organized study sets and easy navigation.',
+            vertical: true
+          },
+          {
+            image: 'https://i.imgur.com/Gm2mEnq.png',
+            description: 'Question screen showing the flashcard in study mode with flip animation and instant feedback on answers.',
+            vertical: true
+          }
+        ];
       default:
         // Default screenshots for any other projects
         return [
@@ -315,6 +368,26 @@ const Demo = () => {
         github: 'https://github.com/ZohebSharif/wordhuntcheater',
         demo: '/demo/9',
         featured: true
+      },
+      {
+        id: '10',
+        title: 'EasyAds',
+        description: 'Developed an AI-powered ad generation platform that creates dynamic advertisements for videos using LLM technology. Built with real-time market analytics tracking pricing, demand levels, and ad performance metrics updated every three minutes.',
+        image: 'https://imgur.com/GO73M4R.png',
+        tags: ['AI', 'LLM', 'Full Stack', 'Real-time Analytics', 'Hackathon', 'Market Intelligence'],
+        github: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
+        demo: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
+        featured: true
+      },
+      {
+        id: '11',
+        title: 'Android FlashCard App',
+        description: 'Built a native Android flashcard application for efficient study and learning. The app features card management, study modes, and persistent storage using Android development best practices with Java.',
+        image: 'https://i.imgur.com/kMkbNw5.png',
+        tags: ['Android', 'Java', 'Gradle', 'Mobile Development', 'Educational App'],
+        github: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+        demo: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+        featured: true
       }
     ];
   };
@@ -341,13 +414,19 @@ const Demo = () => {
   }
 
   return (
-    <div className="min-h-screen bg-navy-dark pt-20 pb-16 px-6">
+    <div
+      className="w-full pt-20 pb-16 px-6"
+      style={{
+        background: 'linear-gradient(180deg, #0d1117 0%, #161b22 50%, #0d1117 100%)',
+      }}
+    >
       {/* Back button */}
       <div className="max-w-6xl mx-auto mb-8">
         <Button 
           onClick={() => navigate('/')} 
           variant="ghost" 
-          className="text-slate hover:text-accent hover:bg-navy-light mb-6"
+          className="mb-6"
+          style={{ color: 'rgba(255,255,255,0.7)' }}
         >
           <ArrowLeft size={16} className="mr-2" />
           Back to Projects
@@ -356,7 +435,8 @@ const Demo = () => {
         <motion.h1 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-4xl font-bold text-slate-light mb-3"
+          className="text-3xl md:text-4xl font-bold mb-3"
+          style={{ color: 'rgba(255,255,255,0.95)' }}
         >
           {project.title}
         </motion.h1>
@@ -368,7 +448,7 @@ const Demo = () => {
           className="flex flex-wrap gap-2 mb-6"
         >
           {project.tags.map((tag, index) => (
-            <span key={index} className="tag">
+            <span key={index} className="macos-tag">
               {tag}
             </span>
           ))}
@@ -378,7 +458,8 @@ const Demo = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-slate max-w-4xl mb-12"
+          className="max-w-4xl mb-12"
+          style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}
         >
           {project.description}
         </motion.p>
@@ -390,30 +471,43 @@ const Demo = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-2xl font-bold text-slate-light mb-8"
+          className="text-2xl font-bold mb-8"
+          style={{ color: 'rgba(255,255,255,0.9)' }}
         >
           Project Screenshots & Details
         </motion.h2>
         
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 ${project.id === '9' ? 'max-w-4xl mx-auto' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-5 mb-12 ${project.id === '9' ? 'max-w-4xl mx-auto' : ''} ${project.id === '11' ? 'lg:grid-cols-3' : ''}`}>
           {screenshots.map((screenshot, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 + index * 0.1 }}
-              className={`bg-navy border border-muted rounded-lg overflow-hidden ${screenshot.fullWidth && screenshots.length === 1 ? 'md:col-span-2' : ''}`}
+              className={`rounded-xl overflow-hidden ${screenshot.fullWidth && screenshots.length === 1 ? 'md:col-span-2' : ''}`}
+              style={{
+                background: 'rgba(30, 30, 30, 0.7)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(20px)',
+              }}
             >
-              <div className={`${screenshot.fullWidth ? 'p-2' : 'aspect-video'} overflow-hidden flex items-center justify-center bg-navy-dark`}>
+              <div
+                className={`${screenshot.vertical ? 'p-4 min-h-[400px] flex items-center justify-center' : screenshot.fullWidth ? 'p-2' : 'aspect-video'} overflow-hidden flex items-center justify-center`}
+                style={{ background: 'rgba(0,0,0,0.3)' }}
+              >
                 <img 
                   src={screenshot.image} 
                   alt={`Screenshot ${index + 1} of ${project.title}`} 
-                  className={`${screenshot.fullWidth ? 'max-w-full max-h-[30vh] object-contain' : 'w-full h-full object-cover'} transition-transform duration-500 hover:scale-105`}
+                  className={`${screenshot.vertical ? 'max-h-[350px] max-w-full object-contain' : screenshot.fullWidth ? 'max-w-full max-h-[30vh] object-contain' : 'w-full h-full object-cover'} transition-transform duration-500 hover:scale-105`}
                 />
               </div>
-              <div className="p-3">
-                <h3 className="text-base font-semibold text-slate-light mb-2">Screenshot {index + 1}</h3>
-                <p className="text-slate text-xs">{screenshot.description}</p>
+              <div className="p-4">
+                <h3 className="text-sm font-semibold mb-1.5" style={{ color: 'rgba(255,255,255,0.9)' }}>
+                  Screenshot {index + 1}
+                </h3>
+                <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                  {screenshot.description}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -427,22 +521,31 @@ const Demo = () => {
           className="flex flex-wrap gap-4 justify-center"
         >
           {project.github && (
-            <Button 
-              variant="outline" 
-              className="border-accent text-accent hover:bg-accent/10"
+            <button
               onClick={() => window.open(project.github, '_blank')}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all hover:scale-105"
+              style={{
+                background: 'rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(20px)',
+                color: 'rgba(255,255,255,0.9)',
+                border: '1px solid rgba(255,255,255,0.15)',
+              }}
             >
               {project.id === '8' ? 'View Live Demo' : 'View Source Code'}
-            </Button>
+            </button>
           )}
           
-          <Button 
-            variant="default" 
-            className="bg-accent text-navy-dark hover:bg-accent/90"
+          <button
             onClick={() => navigate('/')}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all hover:scale-105"
+            style={{
+              background: 'rgba(0,122,255,0.25)',
+              color: '#5ac8fa',
+              border: '1px solid rgba(0,122,255,0.3)',
+            }}
           >
             Back to Portfolio
-          </Button>
+          </button>
         </motion.div>
       </div>
     </div>

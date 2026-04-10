@@ -61,6 +61,39 @@ const Projects = () => {
       ]
     },
     {
+      id: '10',
+      title: 'EasyAds',
+      description: 'Developed an AI-powered ad generation platform that creates dynamic advertisements for videos using LLM technology. Built with real-time market analytics tracking pricing, demand levels, and ad performance metrics updated every three minutes.',
+      image: 'https://i.imgur.com/GO73M4R.png',
+      tags: ['AI', 'LLM', 'Full Stack', 'Real-time Analytics', 'Hackathon', 'Market Intelligence'],
+      github: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
+      demo: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
+      featured: true,
+      screenshots: []
+    },
+    {
+      id: '12',
+      title: 'LangGraph AI Agent',
+      description: 'Developed a full-stack AI agent application using LangGraph with a Python backend and TypeScript/React frontend. Collaborated with a team to build an intelligent agent capable of reasoning through complex tasks and providing contextual responses.',
+      image: 'https://i.imgur.com/GO73M4R.png',
+      tags: ['LangGraph', 'Python', 'TypeScript', 'React', 'AI Agent', 'Full Stack', 'Team Collaboration'],
+      github: 'https://github.com/nicholasmanha/ag-frontend',
+      demo: 'https://github.com/nicholasmanha/ag-frontend',
+      featured: false,
+      screenshots: []
+    },
+    {
+      id: '11',
+      title: 'Android FlashCard App',
+      description: 'Built a native Android flashcard application for efficient study and learning. The app features card management, study modes, and persistent storage using Android development best practices with Java.',
+      image: 'https://i.imgur.com/kMkbNw5.png',
+      tags: ['Android', 'Java', 'Gradle', 'Mobile Development', 'Educational App'],
+      github: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+      demo: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+      featured: true,
+      screenshots: []
+    },
+    {
       id: '1',
       title: 'AI Pokemon Player',
       description: 'An easy-to-use themed Chrome add-on to assist Pokemon Showdown players by suggesting the optimal moves. Blends front-end technologies with decision-making artificial intelligence with PyTorch and Fetch AI. The AI is trained to output the best moves by parsing through chat logs of Pokemon Showdown from previous game play.',      image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',

@@ -27,6 +27,28 @@ const sampleProjects: ProjectData[] = [
     featured: true,
   },
   {
+    id: '2',
+    title: 'LangGraph AI Agent - EasyAds',
+    description:
+      'Full-stack AI agent using LangGraph with Python backend and TypeScript/React frontend for reasoning through complex tasks.',
+    image: 'https://imgur.com/GO73M4R.png',
+    tags: ['LangGraph', 'Python', 'TypeScript', 'React', 'AI Agent'],
+    github: 'https://github.com/nicholasmanha/ag-frontend',
+    demo: 'https://github.com/nicholasmanha/ag-frontend',
+    featured: true,
+  },
+  {
+    id: '3',
+    title: 'Android FlashCard App',
+    description:
+      'Native Android flashcard app for study and learning with card management, study modes, and persistent storage.',
+    image: 'https://i.imgur.com/kMkbNw5.png',
+    tags: ['Android', 'Java', 'Gradle', 'Mobile Development'],
+    github: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+    demo: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+    featured: true,
+  },
+  {
     id: '1',
     title: 'AI Pokemon Player',
     description:
@@ -38,7 +60,7 @@ const sampleProjects: ProjectData[] = [
     featured: true,
   },
   {
-    id: '2',
+    id: '4',
     title: 'Java Communications App',
     description:
       'Robust messaging application with client-server real-time communication using Java Sockets and multithreading.',
@@ -57,7 +79,7 @@ const sampleProjects: ProjectData[] = [
     tags: ['React', 'TypeScript', 'DFS', 'Binary Search', 'Algorithms'],
     github: 'https://github.com/ZohebSharif/wordhuntcheater',
     demo: '/demo/9',
-    featured: true,
+    featured: false,
   },
   {
     id: '6',

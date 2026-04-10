@@ -339,7 +339,7 @@ const FinderWindow: React.FC<FinderWindowProps> = ({ onClose }) => {
         >
           <span>
             {activeSection === 'projects'
-              ? '9 items'
+              ? '11 items'
               : activeSection === 'experience'
               ? '4 items'
               : activeSection === 'awards'
