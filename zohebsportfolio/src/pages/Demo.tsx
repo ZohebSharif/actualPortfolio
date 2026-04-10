@@ -107,7 +107,40 @@ const Demo = () => {
             description: 'Utilized a Q-table to analyze the effectiveness of different moves and strategies based on the current battle state.'
           }
         ];
-      case '2': // Java-Based Communications App
+      case '2': // EasyAds
+        return [
+          {
+            image: 'https://imgur.com/x9qD197.png',
+            description: 'System architecture and design documentation showing the AI-powered ad generation pipeline and real-time market analytics integration.'
+          },
+          {
+            image: 'https://imgur.com/GO73M4R.png',
+            description: 'AI-generated advertisement for Bluetooth earbuds, demonstrating the platform\'s ability to create dynamic product-specific ads in real-time.'
+          },
+          {
+            image: 'https://imgur.com/sNlaLTl.png',
+            description: 'Real-time market information dashboard displaying pricing data, demand levels, and ad performance metrics updated every three minutes.'
+          }
+        ];
+      case '3': // Android FlashCard App
+        return [
+          {
+            image: 'https://i.imgur.com/kMkbNw5.png',
+            description: 'Statistics screen displaying comprehensive study progress, including accuracy rates, cards mastered, and learning streaks to track improvement over time.',
+            vertical: true
+          },
+          {
+            image: 'https://i.imgur.com/vssR6lr.png',
+            description: 'Main screen of the Android FlashCard App showing the card management interface with organized study sets and easy navigation.',
+            vertical: true
+          },
+          {
+            image: 'https://i.imgur.com/Gm2mEnq.png',
+            description: 'Question screen showing the flashcard in study mode with flip animation and instant feedback on answers.',
+            vertical: true
+          }
+        ];
+      case '4': // Java-Based Communications App
         return [
           {
             image: 'https://i.imgur.com/CqVSu0L.png',
@@ -120,36 +153,6 @@ const Demo = () => {
           {
             image: 'https://i.imgur.com/Zry67qz.png',
             description: 'Multiple client windows demonstrating the app\'s ability to handle multiple users and conversations simultaneously.'
-          }
-        ];
-      case '3': // Statistical Analysis with R
-        return [
-          {
-            image: 'https://i.imgur.com/AIp7Epw.png',
-            description: 'Presentation poster summarizing the research findings and statistical significance.'
-          },
-          {
-            image: 'https://i.imgur.com/qLYDN87.png',
-            description: 'R code demonstrating the hypothesis testing methodology used in the research.'
-          },
-          {
-            image: 'https://i.imgur.com/XjxKHo5.png',
-            description: 'Visualization of the statistical analysis results showing correlation between key variables.'
-          }
-        ];
-      case '4': // Wordle Clone
-        return [
-          {
-            image: 'https://i.imgur.com/tjPlOUM.png',
-            description: 'The main game interface of my Java Wordle clone with an active game in progress.'
-          },
-          {
-            image: 'https://i.imgur.com/cdSt45U.png',
-            description: 'A game loss.'
-          },
-          {
-            image: 'https://i.imgur.com/7tEKH8z.png',
-            description: 'Source code for creating the GUI and handling user interactions.'
           }
         ];
       case '5': // DVD Collection Management System
@@ -224,37 +227,49 @@ const Demo = () => {
             fullWidth: true
           }
         ];
-      case '10': // EasyAds
+      case '10': // Statistical Analysis with R
         return [
           {
-            image: 'https://imgur.com/x9qD197.png',
-            description: 'System architecture and design documentation showing the AI-powered ad generation pipeline and real-time market analytics integration.'
+            image: 'https://i.imgur.com/AIp7Epw.png',
+            description: 'Presentation poster summarizing the research findings and statistical significance.'
           },
           {
-            image: 'https://imgur.com/GO73M4R.png',
-            description: 'AI-generated advertisement for Bluetooth earbuds, demonstrating the platform\'s ability to create dynamic product-specific ads in real-time.'
+            image: 'https://i.imgur.com/qLYDN87.png',
+            description: 'R code demonstrating the hypothesis testing methodology used in the research.'
           },
           {
-            image: 'https://imgur.com/sNlaLTl.png',
-            description: 'Real-time market information dashboard displaying pricing data, demand levels, and ad performance metrics updated every three minutes.'
+            image: 'https://i.imgur.com/XjxKHo5.png',
+            description: 'Visualization of the statistical analysis results showing correlation between key variables.'
           }
         ];
-      case '11': // Android FlashCard App
+      case '11': // Wordle Clone
         return [
           {
-            image: 'https://i.imgur.com/kMkbNw5.png',
-            description: 'Statistics screen displaying comprehensive study progress, including accuracy rates, cards mastered, and learning streaks to track improvement over time.',
-            vertical: true
+            image: 'https://i.imgur.com/tjPlOUM.png',
+            description: 'The main game interface of my Java Wordle clone with an active game in progress.'
           },
           {
-            image: 'https://i.imgur.com/vssR6lr.png',
-            description: 'Main screen of the Android FlashCard App showing the card management interface with organized study sets and easy navigation.',
-            vertical: true
+            image: 'https://i.imgur.com/cdSt45U.png',
+            description: 'A game loss.'
           },
           {
-            image: 'https://i.imgur.com/Gm2mEnq.png',
-            description: 'Question screen showing the flashcard in study mode with flip animation and instant feedback on answers.',
-            vertical: true
+            image: 'https://i.imgur.com/7tEKH8z.png',
+            description: 'Source code for creating the GUI and handling user interactions.'
+          }
+        ];
+      case '12': // DVD Collection Management System
+        return [
+          {
+            image: 'https://i.imgur.com/XuRaIou.png',
+            description: 'The main dashboard of the DVD Collection Management System showing the user\'s library overview.'
+          },
+          {
+            image: 'https://i.imgur.com/ZmGOedG.png',
+            description: 'Clicking "Play" on a DVD opens a new window with the DVD\'s movie, uses the devices native player.'
+          },
+          {
+            image: 'https://i.imgur.com/u6WEbZK.png',
+            description: 'DVDs are persisted in a local text file, allowing users to add, remove, and edit their collection.'
           }
         ];
       default:
@@ -282,112 +297,112 @@ const Demo = () => {
       {
         id: '8',
         title: 'ALS Publications Management System',
-        description: 'Developed a sophisticated scientific publication management and visualization platform for Lawrence Berkeley National Laboratory\'s Advanced Light Source facility. Features a multi route React application with admin and slideshow views, scientific data visualization with interactive carousel displays, and category based content organization across Chemistry/Energy, Physics, Bioscience, and other research domains. Built with enterprise level architecture for prestigious research institution.',
+        description: 'Built a publication management platform for Lawrence Berkeley Lab with admin and slideshow views, interactive visualizations, and organized research content across multiple scientific fields.',
         image: 'https://i.imgur.com/IJdE8RA.png',
-        tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Visualization', 'Enterprise Development', 'Research Institutions'],
+        tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Viz'],
         github: 'https://zohebsharif.github.io/EasyPublication/',
         demo: '/demo/8',
         featured: true
       },
       {
+        id: '2',
+        title: 'LangGraph AI Agent - EasyAds',
+        description: 'Full-stack AI agent using LangGraph with Python backend and TypeScript/React frontend for reasoning through complex tasks.',
+        image: 'https://imgur.com/GO73M4R.png',
+        tags: ['LangGraph', 'Python', 'TypeScript', 'React', 'AI Agent'],
+        github: 'https://github.com/nicholasmanha/ag-frontend',
+        demo: 'https://github.com/nicholasmanha/ag-frontend',
+        featured: true
+      },
+      {
+        id: '3',
+        title: 'Android FlashCard App',
+        description: 'Native Android flashcard app for study and learning with card management, study modes, and persistent storage.',
+        image: 'https://i.imgur.com/kMkbNw5.png',
+        tags: ['Android', 'Java', 'Gradle', 'Mobile Development'],
+        github: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+        demo: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
+        featured: true
+      },
+      {
         id: '1',
         title: 'AI Pokemon Player',
-        description: 'A themed Chrome extension with a user-friendly UI to assist players in Pokemon Showdown by suggesting optimal moves.',
+        description: 'A Chrome extension to assist Pokemon Showdown players by suggesting optimal moves using PyTorch ML and Fetch AI agents.',
         image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
-        tags: ['Fetch AI Agent', 'PyTorch', 'Python', 'Machine Learning', 'CSS', 'HTML'],
+        tags: ['Fetch AI', 'PyTorch', 'Python', 'ML', 'Chrome Extension'],
         github: 'https://github.com/ZohebSharif/pokemon-showdown-bot',
         demo: '/demo/1',
         featured: true
       },
       {
-        id: '2',
-        title: 'Java-Based Communications App',
-        description: 'Developed a robust, full-featured messaging application with real-time client-server communication.',
-        image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
-        tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI Design'],
-        github: 'https://github.com/ZohebSharif/communicationsGroup4',
-        demo: '/demo/2',
-        featured: true
-      },
-      {
-        id: '6',
-        title: 'HackDavis Project',
-        description: 'Developed an innovative educational platform called EasyLearn during the HackDavis hackathon. This solution addresses the challenge of quick, accessible learning through AI-powered lessons, interactive quizzes, and voice interaction capabilities.',
-        image: 'https://i.imgur.com/BHuLvjO.png',
-        tags: ['Hackathon', 'Team Project', 'React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack'],
-        github: 'https://github.com/yoshiyahoo/HackDavis-Repo',
-        demo: '/demo/6',
-        featured: true
-      },
-      {
-        id: '3',
-        title: 'Statistical Analysis with R',
-        description: 'Research project focused on conducting statistical analysis and hypothesis testing using R.',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-        tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
-        github: '',
-        demo: '/demo/3',
-        featured: false
-      },
-      {
         id: '4',
-        title: 'Wordle Clone',
-        description: 'I built a Wordle game from scratch using Java and Swing.',
-        image: 'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
-        tags: ['Java', 'Java Swing', 'UI Design', 'Algorithm Design'],
-        github: 'https://github.com/ZohebSharif/wordleUnlimited',
+        title: 'Java Communications App',
+        description: 'Robust messaging application with client-server real-time communication using Java Sockets and multithreading.',
+        image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
+        tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI'],
+        github: 'https://github.com/ZohebSharif/communicationsGroup4',
         demo: '/demo/4',
-        featured: false
-      },
-      {
-        id: '5',
-        title: 'DVD Collection Management System',
-        description: 'Developed a comprehensive DVD collection management application featuring dual interfaces.',
-        image: 'https://i.ebayimg.com/images/g/ZPgAAOSwn6Zj9Apd/s-l1600.webp',
-        tags: ['Java', 'Java Swing', 'OOP', 'File I/O'],
-        github: 'https://github.com/ZohebSharif/dvdPlayer',
-        demo: '/demo/5',
-        featured: false
-      },
-      {
-        id: '7',
-        title: 'AI Study Guide Generator',
-        description: 'Developed a React-based web application that generates comprehensive study guides on any topic using AI.',
-        image: 'https://i.imgur.com/mt2gk0U.png',
-        tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI', 'Full Stack'],
-        github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
-        demo: '/demo/7',
         featured: true
       },
       {
         id: '9',
         title: 'Word Hunt Cheater',
-        description: "Built a tool to help you win at Word Hunt games. Just enter the 4x4 letter grid, and it finds all possible words, ranks them by points, and shows you the total score. Quick input with auto-cursor movement makes it super easy to use.",
+        description: 'Enter a 4x4 letter grid and find all possible words ranked by points. Uses DFS and binary search algorithms.',
         image: 'https://i.imgur.com/UOurQ7z.png',
-        tags: ['React', 'TypeScript', 'Algorithms', 'Tailwind CSS', 'DFS', 'Binary Search', 'Vite'],
+        tags: ['React', 'TypeScript', 'DFS', 'Binary Search', 'Algorithms'],
         github: 'https://github.com/ZohebSharif/wordhuntcheater',
         demo: '/demo/9',
-        featured: true
+        featured: false
+      },
+      {
+        id: '6',
+        title: 'HackDavis — EasyLearn',
+        description: 'Educational platform with AI-based lessons, interactive quizzes, and voice interaction for quick, ubiquitous learning.',
+        image: 'https://i.imgur.com/BHuLvjO.png',
+        tags: ['React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack'],
+        github: 'https://github.com/yoshiyahoo/HackDavis-Repo',
+        demo: '/demo/6',
+        featured: false
+      },
+      {
+        id: '7',
+        title: 'AI Study Guide Generator',
+        description: "React app that generates study guides using Groq's LLM and stores them in Supabase for later retrieval.",
+        image: 'https://i.imgur.com/LW9S3pW.png',
+        tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI'],
+        github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
+        demo: '/demo/7',
+        featured: false
       },
       {
         id: '10',
-        title: 'EasyAds',
-        description: 'Developed an AI-powered ad generation platform that creates dynamic advertisements for videos using LLM technology. Built with real-time market analytics tracking pricing, demand levels, and ad performance metrics updated every three minutes.',
-        image: 'https://imgur.com/GO73M4R.png',
-        tags: ['AI', 'LLM', 'Full Stack', 'Real-time Analytics', 'Hackathon', 'Market Intelligence'],
-        github: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
-        demo: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
-        featured: true
+        title: 'Statistical Analysis with R',
+        description: 'Research project for statistical analysis and hypothesis testing with R, focusing on linear regression models.',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+        tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
+        github: '',
+        demo: '/demo/10',
+        featured: false
       },
       {
         id: '11',
-        title: 'Android FlashCard App',
-        description: 'Built a native Android flashcard application for efficient study and learning. The app features card management, study modes, and persistent storage using Android development best practices with Java.',
-        image: 'https://i.imgur.com/kMkbNw5.png',
-        tags: ['Android', 'Java', 'Gradle', 'Mobile Development', 'Educational App'],
-        github: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
-        demo: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
-        featured: true
+        title: 'Wordle Clone',
+        description: 'Wordle game built in Java/Swing with interactive GUI, instant feedback on letter placement, and limited attempts.',
+        image: 'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
+        tags: ['Java', 'Java Swing', 'UI Design', 'Algorithms'],
+        github: 'https://github.com/ZohebSharif/wordleUnlimited',
+        demo: '/demo/11',
+        featured: false
+      },
+      {
+        id: '12',
+        title: 'DVD Collection Manager',
+        description: 'DVD collection management with GUI and console interfaces, media playback, filtering, and persistent file storage.',
+        image: 'https://i.ebayimg.com/images/g/ZPgAAOSwn6Zj9Apd/s-l1600.webp',
+        tags: ['Java', 'Java Swing', 'OOP', 'File I/O'],
+        github: 'https://github.com/ZohebSharif/dvdPlayer',
+        demo: '/demo/12',
+        featured: false
       }
     ];
   };

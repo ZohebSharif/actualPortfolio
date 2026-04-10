@@ -104,18 +104,18 @@ const sampleProjects: ProjectData[] = [
     featured: false,
   },
   {
-    id: '3',
+    id: '10',
     title: 'Statistical Analysis with R',
     description:
       'Research project for statistical analysis and hypothesis testing with R, focusing on linear regression models.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
     tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
     github: '',
-    demo: '/demo/3',
+    demo: '/demo/10',
     featured: false,
   },
   {
-    id: '4',
+    id: '11',
     title: 'Wordle Clone',
     description:
       'Wordle game built in Java/Swing with interactive GUI, instant feedback on letter placement, and limited attempts.',
@@ -123,18 +123,18 @@ const sampleProjects: ProjectData[] = [
       'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
     tags: ['Java', 'Java Swing', 'UI Design', 'Algorithms'],
     github: 'https://github.com/ZohebSharif/wordleUnlimited',
-    demo: '/demo/4',
+    demo: '/demo/11',
     featured: false,
   },
   {
-    id: '5',
+    id: '12',
     title: 'DVD Collection Manager',
     description:
       'DVD collection management with GUI and console interfaces, media playback, filtering, and persistent file storage.',
     image: 'https://i.ebayimg.com/images/g/ZPgAAOSwn6Zj9Apd/s-l1600.webp',
     tags: ['Java', 'Java Swing', 'OOP', 'File I/O'],
     github: 'https://github.com/ZohebSharif/dvdPlayer',
-    demo: '/demo/5',
+    demo: '/demo/12',
     featured: false,
   },
 ];
@@ -226,7 +226,7 @@ const FinderProjects = () => {
   }
 
   return (
-    <div>
+    <div className="pt-6">
       {/* Filter Bar */}
       <div className="flex items-center gap-2 mb-5">
         <button

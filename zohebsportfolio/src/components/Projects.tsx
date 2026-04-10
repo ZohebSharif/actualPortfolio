@@ -48,46 +48,31 @@ const Projects = () => {
     {
       id: '8',
       title: 'ALS Publications Management System',
-      description: 'Built a publication management platform for Lawrence Berkeley Lab with admin and slideshow views, interactive visualizations, and organized research content across multiple scientific fields.'
-      ,image: 'https://i.imgur.com/IJdE8RA.png',
-      tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Visualization', 'Enterprise Development', 'Research Institutions'],
+      description: 'Built a publication management platform for Lawrence Berkeley Lab with admin and slideshow views, interactive visualizations, and organized research content across multiple scientific fields.',
+      image: 'https://i.imgur.com/IJdE8RA.png',
+      tags: ['React', 'TypeScript', 'Vite', 'CSS Modules', 'Scientific Data Visualization'],
       github: 'https://zohebsharif.github.io/EasyPublication/',
       demo: '/demo/8',
       featured: true,
-      screenshots: [
-        'https://i.imgur.com/IJdE8RA.png',
-        'https://i.imgur.com/phujwfu.png',
-        'https://i.imgur.com/kf3VO0F.png'
-      ]
+      screenshots: []
     },
     {
-      id: '10',
-      title: 'EasyAds',
-      description: 'Developed an AI-powered ad generation platform that creates dynamic advertisements for videos using LLM technology. Built with real-time market analytics tracking pricing, demand levels, and ad performance metrics updated every three minutes.',
-      image: 'https://i.imgur.com/GO73M4R.png',
-      tags: ['AI', 'LLM', 'Full Stack', 'Real-time Analytics', 'Hackathon', 'Market Intelligence'],
-      github: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
-      demo: 'https://devpost.com/software/easyads?ref_content=my-projects-tab&ref_feature=my_projects',
+      id: '2',
+      title: 'LangGraph AI Agent - EasyAds',
+      description: 'Full-stack AI agent using LangGraph with Python backend and TypeScript/React frontend for reasoning through complex tasks.',
+      image: 'https://imgur.com/GO73M4R.png',
+      tags: ['LangGraph', 'Python', 'TypeScript', 'React', 'AI Agent'],
+      github: 'https://github.com/nicholasmanha/ag-frontend',
+      demo: 'https://github.com/nicholasmanha/ag-frontend',
       featured: true,
       screenshots: []
     },
     {
-      id: '12',
-      title: 'LangGraph AI Agent',
-      description: 'Developed a full-stack AI agent application using LangGraph with a Python backend and TypeScript/React frontend. Collaborated with a team to build an intelligent agent capable of reasoning through complex tasks and providing contextual responses.',
-      image: 'https://i.imgur.com/GO73M4R.png',
-      tags: ['LangGraph', 'Python', 'TypeScript', 'React', 'AI Agent', 'Full Stack', 'Team Collaboration'],
-      github: 'https://github.com/nicholasmanha/ag-frontend',
-      demo: 'https://github.com/nicholasmanha/ag-frontend',
-      featured: false,
-      screenshots: []
-    },
-    {
-      id: '11',
+      id: '3',
       title: 'Android FlashCard App',
-      description: 'Built a native Android flashcard application for efficient study and learning. The app features card management, study modes, and persistent storage using Android development best practices with Java.',
+      description: 'Native Android flashcard app for study and learning with card management, study modes, and persistent storage.',
       image: 'https://i.imgur.com/kMkbNw5.png',
-      tags: ['Android', 'Java', 'Gradle', 'Mobile Development', 'Educational App'],
+      tags: ['Android', 'Java', 'Gradle', 'Mobile Development'],
       github: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
       demo: 'https://github.com/ZohebSharif/AndroidFlashCardApp',
       featured: true,
@@ -96,101 +81,90 @@ const Projects = () => {
     {
       id: '1',
       title: 'AI Pokemon Player',
-      description: 'An easy-to-use themed Chrome add-on to assist Pokemon Showdown players by suggesting the optimal moves. Blends front-end technologies with decision-making artificial intelligence with PyTorch and Fetch AI. The AI is trained to output the best moves by parsing through chat logs of Pokemon Showdown from previous game play.',      image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
-      tags: ['Fetch AI Agent', 'PyTorch', 'Python', 'Machine Learning', 'CSS', 'HTML'],
+      description: 'A Chrome extension to assist Pokemon Showdown players by suggesting optimal moves using PyTorch ML and Fetch AI agents.',
+      image: 'https://images.unsplash.com/photo-1542779283-429940ce8336',
+      tags: ['Fetch AI', 'PyTorch', 'Python', 'ML', 'Chrome Extension'],
       github: 'https://github.com/ZohebSharif/pokemon-showdown-bot',
       demo: '/demo/1',
-      featured: true
+      featured: true,
+      screenshots: []
     },
     {
-      id: '2',
-      title: 'Java-Based Communications App',
-      description: 'Designed a robust messaging application with client-server real-time communication. Collaborated with two group members to design and implement a scalable chat system using Java Sockets. Developed a multithreaded server to effectively handle concurrent client connections and designed a responsive GUI with serializable Packet objects to send structured messages.',
+      id: '4',
+      title: 'Java Communications App',
+      description: 'Robust messaging application with client-server real-time communication using Java Sockets and multithreading.',
       image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624',
-      tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI Design', 'Software Architecture', 'Testing'],
+      tags: ['Java', 'Socket Programming', 'Multithreading', 'GUI'],
       github: 'https://github.com/ZohebSharif/communicationsGroup4',
-      demo: '/demo/2',
-      featured: true
+      demo: '/demo/4',
+      featured: true,
+      screenshots: []
     },
-        {
+    {
       id: '9',
       title: 'Word Hunt Cheater',
-      description: "Built a tool to help you win at Word Hunt games. Just enter the 4x4 letter grid, and it finds all possible words, ranks them by points, and shows you the total score. Quick input with auto-cursor movement makes it super easy to use.",
+      description: 'Enter a 4x4 letter grid and find all possible words ranked by points. Uses DFS and binary search algorithms.',
       image: 'https://i.imgur.com/UOurQ7z.png',
-      tags: ['React', 'TypeScript', 'Algorithms', 'Tailwind CSS', 'DFS', 'Binary Search', 'Vite'],
+      tags: ['React', 'TypeScript', 'DFS', 'Binary Search', 'Algorithms'],
       github: 'https://github.com/ZohebSharif/wordhuntcheater',
       demo: '/demo/9',
-      featured: true,
-      screenshots: [
-        'https://i.imgur.com/UOurQ7z.png',
-        'https://i.imgur.com/Ddrwh2Q.png'
-      ]
+      featured: false,
+      screenshots: []
     },
-
     {
       id: '6',
-      title: 'HackDavis Project',
-      description: 'Developed an educational platform called EasyLearn as part of the HackDavis hackathon. The product addresses the issue of quick, ubiquitous learning through AI-based lessons, interactive quizzes, and voice interaction capabilities.',
+      title: 'HackDavis — EasyLearn',
+      description: 'Educational platform with AI-based lessons, interactive quizzes, and voice interaction for quick, ubiquitous learning.',
       image: 'https://i.imgur.com/BHuLvjO.png',
-      tags: ['Hackathon', 'Team Project', 'React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack', 'TypeScript'],
+      tags: ['React', 'Flask', 'MongoDB', 'Eleven Labs API', 'Full Stack'],
       github: 'https://github.com/yoshiyahoo/HackDavis-Repo',
       demo: '/demo/6',
       featured: false,
-      screenshots: [
-        'https://i.imgur.com/qT7Pjoa.png',
-        'https://i.imgur.com/75YUbcg.png',
-        'https://i.imgur.com/rKgJ3YX.png'
-      ]
-    },
-    {
-      id: '3',
-      title: 'Statistical Analysis with R',
-      description: 'Research project for conducting statistical analysis and hypothesis testing with R, with specific focus on linear regression models with data from Kaggle. Researched various models of data and applied statistical concepts to identify key trends and patterns.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-      tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
-      github: '',
-      demo: '/demo/3',
-      featured: true,
-      screenshots: [
-        'https://i.imgur.com/5EO74Ut.jpg',  // Direct image link, not album link
-        'https://i.imgur.com/AIp7Epw.png',
-      ]
+      screenshots: []
     },
     {
       id: '7',
       title: 'AI Study Guide Generator',
-
-      description: "Developed a React web app that generates intensive study guides on any topic with the help of AI. The app utilizes Groq's LLM (llama3-8b-8192 model) to generate intricate study materials and stores them in a Supabase database to retrieve later. Features a minimalist dark-mode UI with two tabs: one to generate new guides and another to view saved guides.",
+      description: "React app that generates study guides using Groq's LLM and stores them in Supabase for later retrieval.",
       image: 'https://i.imgur.com/LW9S3pW.png',
-      tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI', 'Full Stack'],
+      tags: ['React', 'Node.js', 'Express', 'Supabase', 'Groq API', 'AI'],
       github: 'https://github.com/ZohebSharif/AIStudyGuideGenerator',
       demo: '/demo/7',
       featured: false,
-      screenshots: [
-        'https://i.imgur.com/mt2gk0U.png',
-        'https://i.imgur.com/LU8XjVv.png',
-        'https://i.imgur.com/G9fpV74.png'
-      ]
+      screenshots: []
     },
     {
-      id: '4',
+      id: '10',
+      title: 'Statistical Analysis with R',
+      description: 'Research project for statistical analysis and hypothesis testing with R, focusing on linear regression models.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+      tags: ['R', 'Statistical Analysis', 'Data Science', 'Linear Regression'],
+      github: '',
+      demo: '/demo/10',
+      featured: false,
+      screenshots: []
+    },
+    {
+      id: '11',
       title: 'Wordle Clone',
-      description: 'I created a Wordle game in Java and Swing with an interactive graphical user interface (GUI) for users to find an unknown five-letter word within a predetermined number of attempts. The game provides instantaneous feedback on correct, misplaced, and incorrect letters, with a limited number of attempts to solve the puzzle, adding a sense of challenge.',
+      description: 'Wordle game built in Java/Swing with interactive GUI, instant feedback on letter placement, and limited attempts.',
       image: 'https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp',
-      tags: ['Java', 'Java Swing', 'UI Design', 'Algorithm Design', 'OOP', 'Problem Solving'],
+      tags: ['Java', 'Java Swing', 'UI Design', 'Algorithms'],
       github: 'https://github.com/ZohebSharif/wordleUnlimited',
-      demo: '/demo/4',
-      featured: false
+      demo: '/demo/11',
+      featured: false,
+      screenshots: []
     },
     {
-      id: '5',
-      title: 'DVD Collection Management System',
-      description: "Implemented a comprehensive DVD collection management program with two interfaces: a graphical user interface (GUI) and a console interface.      The program allows users to store DVD metadata (title, rating, running time), add or update entries, filter the entries based on rating, calculate total running time, and even play movies using the system's default media player.'. Implemented with Java and Swing, the application demonstrates object-oriented programming principles like encapsulation and separation of concerns, with data storage persistently achieved through file I/O.",
+      id: '12',
+      title: 'DVD Collection Manager',
+      description: 'DVD collection management with GUI and console interfaces, media playback, filtering, and persistent file storage.',
       image: 'https://i.ebayimg.com/images/g/ZPgAAOSwn6Zj9Apd/s-l1600.webp',
-      tags: ['Java', 'Java Swing', 'OOP', 'File I/O', 'GUI Development', 'Data Management'],
+      tags: ['Java', 'Java Swing', 'OOP', 'File I/O'],
       github: 'https://github.com/ZohebSharif/dvdPlayer',
-      demo: '/demo/5',
-      featured: false
+      demo: '/demo/12',
+      featured: false,
+      screenshots: []
     }
   ];
   
